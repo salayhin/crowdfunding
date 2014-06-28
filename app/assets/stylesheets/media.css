@@ -1,0 +1,369 @@
+/**
+ * Prodo v1.1
+ * Onepage HTML template
+ * http://axminenko.com
+ *
+ * Copyright 2014 Alexander Axminenko
+ **/
+@charset "UTF-8";
+/* Media Queries */
+@media (max-width: 767px) {
+    /*** General and Typography ***/
+
+    #slider .carousel-caption{padding-bottom:40px;}
+    .navbar .navbar-brand{ top: 24px; left: 15px; z-index: 999999999999999999999999999;}
+    .navbar.floating .nav > li a{ text-align: center;}
+    .navbar .navbar-toggle{ margin-top: 5px;}
+    .nsltr_form_sec ul li{ margin-bottom: 20px;}
+    #newslatter h2, #slider .carousel-caption h4{ font-size: 40px; line-height: 45px;}
+    .nsltr_form_sec input[type="email"]{ width: 100%}
+
+    #slider .carousel-caption p{ display: none;}
+
+    h1,
+    .h1 {
+        font-size: 28px;
+    }
+    h2,
+    .h2 {
+        font-size: 24px;
+    }
+    h3,
+    .h3 {
+        font-size: 18px;
+    }
+    /*** Offsets ***/
+    .offsetTop {
+        padding-top: 20px;
+    }
+    .offsetBottom {
+        padding-bottom: 20px;
+    }
+    .offsetTopX {
+        padding-top: 60px;
+    }
+    .offsetBottomX {
+        padding-bottom: 60px;
+    }
+    .offsetTopL {
+        padding-top: 40px;
+    }
+    .offsetBottomL {
+        padding-bottom: 40px;
+    }
+    .offsetTopS {
+        padding-top: 5px;
+    }
+    .offsetBottomS {
+        padding-bottom: 5px;
+    }
+    /*** Sections ***/
+    .section header .icon.largest i {
+        font-size: 60px;
+    }
+    /*** Navigation ***/
+    .navbar {
+        padding-top: 0px;
+    }
+    .navbar .social {
+        display: none !important;
+    }
+    .navbar.floating {
+        /*padding-top: 15px;
+        padding-bottom: 15px;*/
+    }
+    .navbar.three .navbar-nav > li > a:after,
+    .navbar.four .navbar-nav > li > a:after,
+    .navbar.six .navbar-nav > li > a:after {
+        display: none;
+    }
+    .navbar.seven .navbar-nav > li.active > a:after,
+    .navbar.eight .navbar-nav > li.active > a:after,
+    .navbar.nine .navbar-nav > li.active > a:after {
+        display: none;
+    }
+    /*** Intro ***/
+    .intro .content .video-preview {
+        margin-top: 20px;
+        width: 120px;
+    }
+    /*** Arrows ***/
+    .arrows {
+        margin-top: 15px;
+    }
+    /*** Services ***/
+    .services [class*=col] {
+        border-right-width: 0;
+    }
+    .services [class*=col] i.fa {
+        font-size: 60px;
+    }
+    .services-alt [class*=col] i.fa {
+        font-size: 34px;
+        margin-top: 15px;
+    }
+    /*** Buttons ***/
+    .btn {
+        padding: 12px 20px;
+    }
+    .btn.btn-inverse {
+        padding: 10px 18px;
+    }
+    /*** Demo Content ***/
+    .big-ipad.pull-right {
+        float: left !important;
+    }
+    .no-right-xs {
+        float: none !important;
+    }
+    .text-center-xs,
+    .text-center-xs > .pull-right {
+        float: none !important;
+        text-align: center;
+    }
+    /*** Portfolio Filters ***/
+    .portfolio-filters a {
+        padding: 10px 12px;
+        margin-right: 5px;
+        margin-top: 7px;
+    }
+    /*** Our Team ***/
+    .team [class*=col] {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .team [class*=col] .social {
+        float: left;
+        margin-top: 5px;
+        margin-left: -5px;
+    }
+    /*** Animated Bars ***/
+    .circular-bars input {
+        font-size: 16px !important;
+    }
+    .circular-bars h1,
+    .circular-bars .h1,
+    .circular-bars h2,
+    .circular-bars .h2,
+    .circular-bars h3,
+    .circular-bars .h3,
+    .circular-bars h4,
+    .circular-bars .h4,
+    .circular-bars h5,
+    .circular-bars .h5,
+    .circular-bars h6,
+    .circular-bars .h6 {
+        margin-bottom: 20px;
+    }
+    /*** Pricing Tables ***/
+    .pricing-tables .plan {
+        padding-bottom: 17px;
+    }
+    .pricing-tables .plan header {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .pricing-tables .plan ul li {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .pricing-tables .plan .btn:first-of-type {
+        margin-top: 15px;
+    }
+    /*** Sidebars ***/
+    .sidebar {
+        padding-left: 0;
+    }
+    /*** Subscribe for Newsletter ***/
+    .sidebar .newsletter-form input[type="email"],
+    input[type="text"] {
+        width: 100%;
+    }
+    /*** Info Box ***/
+    .info-box {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .info-box input[type="email"] {
+        font-size: 18px;
+    }
+    /*** Contact Information and Form ***/
+    .large-info {
+        font-size: 28px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .contact-form .field {
+        width: 100%;
+        margin-bottom: 15px !important;
+    }
+    /*** Images Slider ***/
+    .image-slider .arrows.large .arrow.left {
+        left: -20px;
+    }
+    .image-slider .arrows.large .arrow.right {
+        right: -20px;
+    }
+    /*** Comments ***/
+    .user-comment {
+        margin-bottom: 25px;
+    }
+    .user-comment .image {
+        width: 60px;
+    }
+    .user-comment .details {
+        margin-left: 90px;
+    }
+    .user-comment .details .info .author {
+        width: 100%;
+    }
+    .user-comment .details .info .date {
+        float: left;
+    }
+    .user-comment .user-comment {
+        margin-top: 25px;
+    }
+    /*** Footer ***/
+    .footer,
+    .footer .social {
+        text-align: center;
+    }
+    /*** Milestone Counters ***/
+    .milestone .counter {
+        font-size: 32px;
+    }
+    /*** How it looks (iMacs Preview) ***/
+    .imacs .item.center {
+        margin-top: 0;
+    }
+    /*** Google Maps ***/
+    .map #google-map {
+        height: 300px;
+    }
+
+    .navbar .navbar-nav > li a:hover, .navbar .navbar-nav > li a:focus,.navbar .navbar-nav > li.active > a{ border:none;}
+    .navbar-toggle .icon-bar{ background:#282828 !important;}
+    .navbar .navbar-nav > li a:hover, .navbar .navbar-nav > li a:focus, .navbar .navbar-nav > li.active > a,.navbar .navbar-nav > li > a{ text-align:center;}
+    /*.floating .navbar-toggle{ display:none;}*/
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Offsets */
+    .offsetTop {
+        padding-top: 40px;
+    }
+
+    .offsetBottom {
+        padding-bottom: 40px;
+    }
+    .offsetTopX {
+        padding-top: 100px;
+    }
+    .offsetBottomX {
+        padding-bottom: 100px;
+    }
+    .offsetTopL {
+        padding-top: 60px;
+    }
+    .offsetBottomL {
+        padding-bottom: 60px;
+    }
+    .offsetTopS {
+        padding-top: 10px;
+    }
+    .offsetBottomS {
+        padding-bottom: 10px;
+    }
+    /*** Sections ***/
+    .section header .icon.largest i {
+        font-size: 80px;
+    }
+    /*** Navigation ***/
+    .navbar {
+        padding-top: 0px;
+    }
+    .navbar .social {
+        display: none !important;
+    }
+    .navbar.floating {
+        /*padding-top: 25px;
+        padding-bottom: 20px;*/
+    }
+    .navbar.seven .navbar-nav > li.active > a:after,
+    .navbar.eight .navbar-nav > li.active > a:after,
+    .navbar.nine .navbar-nav > li.active > a:after {
+        margin-top: 18px;
+    }
+    .navbar.seven:not(.floating) .navbar-nav > li.active > a:after,
+    .navbar.eight:not(.floating) .navbar-nav > li.active > a:after,
+    .navbar.nine:not(.floating) .navbar-nav > li.active > a:after {
+        margin-top: 12px;
+    }
+    /*** Services ***/
+    .services [class*=col] i.fa {
+        font-size: 60px;
+    }
+    /*** Our Team ***/
+    .team [class*=col] {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    /*** Info Box ***/
+    .info-box {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    /*** Pricing Tables ***/
+    .pricing-tables .plan {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*** Subscribe for Newsletter ***/
+    .sidebar .newsletter-form input[type="email"],
+    input[type="text"] {
+        width: 100%;
+    }
+    /*** Milestone Counters ***/
+    .milestone .counter {
+        font-size: 42px;
+    }
+    /*** How it looks (iMacs Preview) ***/
+    .imacs .item.center {
+        margin-top: 0;
+    }
+    .imacs .item.center img {
+        width: 400px;
+    }
+    .imacs .item.left.complete {
+        top: 25px;
+        left: 30px;
+        width: 300px;
+    }
+    .imacs .item.right.complete {
+        top: 25px;
+        right: 30px;
+        width: 300px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*** Navigation ***/
+    .navbar .social {
+        margin-left: 50px;
+    }
+    /*** Subscribe for Newsletter ***/
+    .sidebar .newsletter-form input[type="email"],
+    input[type="text"] {
+        width: 150px;
+    }
+    /*** How it looks (iMacs Preview) ***/
+    .imacs .item.center {
+        margin-top: 25px;
+    }
+    .imacs .item.left.complete {
+        top: -25px;
+        left: 30px;
+    }
+    .imacs .item.right.complete {
+        top: -25px;
+        right: 30px;
+    }
+}

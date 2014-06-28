@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Scribble" content="Color picking pen">
+  <title>A Color Picker Pen That Reproduces Any Color.</title>
+
+  <!-- Bootstrap -->
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- Modernizr -->
+  <script src="js/modernizr.custom.js"></script>
+  <!-- Theme Styles -->
+  <link href="css/plugins/font-awesome.min.css" rel="stylesheet">
+  <link href="css/plugins/isotope.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/media.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,300,300italic,400italic,500,700italic,700,900italic,900' rel='stylesheet' type='text/css'>
+
+  <link rel="shortcut icon" href="http://www.getscribblepen.com/favicon.ico" type="image/icon"> <link rel="icon" href="http://www.getscribblepen.com/favicon.ico" type="image/icon">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <link href="css/oldie.css" rel="stylesheet">
+  <![endif]-->
+  <script src="//static.getclicky.com/js" type="text/javascript"></script>
+  <script type="text/javascript">try{ clicky.init(100739435); }catch(e){}</script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100739435ns.gif" /></p></noscript>
+
+  <script language="javascript">
+      document.onmousedown=disableclick;
+      status="Right Click Disabled";
+      function disableclick(event)
+      {
+          if(event.button==2)
+          {
+              alert(status);
+              return false;
+          }
+      }
+  </script>
+
+
+
+
+
+
+  <title><%= Settings.product_name %></title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+
+
+
+
+
+</head>
+<body class="dart dart_index" oncontextmenu="return false">
+<!-- Loader -->
+<div class="page-loader">
+  <div class="content">
+    <div class="line">
+      <div class="progress"></div>
+    </div>
+    <div class="text">Loading...</div>
+  </div>
+</div>
+
+
+
+<div class="badge1">
+  <a href="#newsletter"><img src="images/order-soon.png"></a>
+</div>
+
+
+<!-- Navigation Bar -->
+<div class="navbar two" role="navigation">
+  <div class="top_white_header">
+    <div class="container">
+      <div class="row">
+        <!--<div class="col-sm-12">
+            <div class="social_top">
+            <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  <div class="bot_menu_header">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Menu for Tablets / Phones -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo4.png" data-alt="images/logo4.png" alt="">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+
+
+        <!-- Items -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#intro">Home</a></li>
+          <!--li><a href="#features">Features</a></li!-->
+          <li><a href="#meet">Get Creative</a></li>
+          <li><a href="#section-colors">Choose your Color</a></li>
+
+
+
+          <!--<li><a href="#team">Specs</a></li>
+
+          <li><a href="#contact">FAQ</a></li>-->
+          <li><a href="#specification">Specifications</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="http://getscribblepen.com/blog/?p=31">FAQs</a></li>
+          <li><a href="#newsletter">PRE-ORDER</a></li>
+          <!--<li><a href="#contact">Contact Us</a></li>-->
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+<section class="intro" id="intro">
+
+  <img src="images/combo4.jpg" class="deskimg">
+  <img src="images/Scribble_Pen.jpg" class="mobimg">
+</section>
+<!-- Intro -->
+<!-- (1) Video Background -->
+<!--<section class="intro" id="intro" data-type="video" data-source="kn-1D5z3-Cs" data-on-error="images/demo/intro/static-image.jpg" data-mute="true" data-start="0" data-overlay="0.4">
+
+    <div class="container">
+        <div class="content">
+
+            <div class="text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <header>
+                            <h1 class="offsetTopClear animate"><span>Lorem Ipsum is simply dummy </span> text of the printing</h1>
+                            <p class="banner_text animate">Lorem Ipsum is simply dummy text</p>
+
+                        </header>
+
+                        <div class="video-control animate" id="video-mode">
+                            <img src="images/play_btn.png">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mouse hidden-xs">
+        <div class="wheel"></div>
+    </div>
+</section>-->
+<!--<section class="section picture_sec_home" id="intro">
+
+  <img src="images/combo.jpg">
+
+</section>-->
+
+<!-- About -->
+<section class="section" id="features">
+  <div class="inner_sec offsetTop" style="margin-top:-3px;">
+    <!-- Container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <header class="text-center">
+            <!-- Icon (Font-Awesome) or Image -->
+            <h2 style="color:#39c;"> meticulously designed                  </h2>
+          </header>
+        </div>
+      </div>
+      <div class="row offsetBottomL">
+        <div class="col-md-10 col-md-offset-1 text-center sub_para">
+          <p style="text-align:left;">Scribble is the first coloring device of its kind that can take the world of color around you and transfer it directly to either paper or your favourite mobile device.
+            The Scribble pen and stylus pairs with Scribble+ mobile app to instantly sync every color you scan directly onto your iPhone, iPad or Android mobile device. Your colors become more useful when they are organized, tagged, searchable and converted to various color models.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Delimiter -->
+
+    <!-- Services -->
+    <div class="container">
+      <div class="row services">
+        <!-- Cell 1 -->
+        <div class="col-md-4 col-sm-4 text-center offsetBottomL animation animation-from-left">
+          <div>
+            <img src="images/icon.jpg">
+            <header>
+              <h4>Match any color and instantly draw on paper</h4>
+            </header>
+            <p class="box_para"></p>
+          </div>
+        </div>
+        <!-- Cell 2 -->
+        <div class="col-md-4 col-sm-4 text-center offsetBottomL animation animation-from-left">
+          <div>
+            <img src="images/mobileframes.jpg">
+            <header>
+              <h4>Doodle on your favorite mobile device</h4>
+            </header>
+            <p class="box_para"></p>
+          </div>
+        </div>
+        <!-- Cell 3 -->
+        <div class="col-md-4 col-sm-4 text-center offsetBottomL animation animation-from-left">
+          <div>
+            <img src="images/iphone.jpg">
+            <header>
+              <h4>Compatible with iOS, Android and Windows Phone </h4>
+            </header>
+            <p class="box_para"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- picture Sec -->
+<section class="section picture_sec" id="meet">
+  <div class="inner_sec">
+    <img src="images/image11sec.jpg">
+  </div>
+</section>
+
+
+<section class="section picture_sec" id="">
+  <div class="inner_sec">
+    <img src="images/image2sec.jpg">
+  </div>
+</section>
+
+
+
+
+
+<section class="section" id="slider">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="images/des2.jpg" alt="">
+        <div class="carousel-caption">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="item ">
+        <img src="images/des1.jpg" alt="">
+        <div class="carousel-caption">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="item ">
+        <img src="images/des3.jpg" alt="">
+        <div class="carousel-caption">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon-chevron-left">
+    	<img src="images/aro-left.png" alt="">
+    </span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon-chevron-right">
+    <img src="images/aro-rht.png" alt="">
+    </span>
+    </a>
+  </div>
+</section>
+
+<section style="height: auto !important;position: relative;"  id="section-colors">
+  <div class="inner_sec" style="margin-top:-3px;">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-4 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2 big lixPen">
+        <div class="pen pen_1 black_p1" data-color="black_p1"></div>
+        <div class="col-xs-10 col-xs-offset-2 color-box-piker">
+          <div class="infoSelect show on">
+            <img class="caption-pen img-responsive" src="assets/images/pen/p1_caption.png"/>
+            <menu class="colors pen_1_menu_colors">
+              <li class="black tooltipstered active" data-class="black_p1" data-color="Black"><span style="display: none;">Black</span></li>
+              <li class="magenta tooltipstered" data-class="magenta_p1" data-color="Magenta"><span style="display: none;">Magenta</span></li>
+              <li class="orange tooltipstered" data-class="orange_p1" data-color="Orange"><span style="display: none;">Orange</span></li>
+              <li class="white tooltipstered" data-class="white_p1" data-color="White"><span style="display: none;">White</span></li>
+              <li class="blue tooltipstered" data-class="blue_p1" data-color="Blue"><span style="display: none;">Blue</span></li>
+              <li class="sliver tooltipstered" data-class="sliver_p1" data-color="Sliver"><span style="display: none;">Silver</span></li>
+            </menu>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="col-xs-8 col-xs-offset-4 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2 big lixPen">
+        <div class="pen pen_2 black_p2"></div>
+        <div class="col-xs-10 col-xs-offset-2 color-box-piker">
+          <div class="infoSelect show on">
+            <img class="caption-pen img-responsive" src="assets/images/pen/p2_caption.png"/>
+            <menu class="colors pen_2_menu_colors">
+              <li class="black tooltipstered active" data-class="black_p2" data-color="Black"><span style="display: none;">Black</span></li>
+              <li class="magenta tooltipstered" data-class="magenta_p2" data-color="Magenta"><span style="display: none;">Magenta</span></li>
+              <li class="orange tooltipstered" data-class="orange_p2" data-color="Orange"><span style="display: none;">Orange</span></li>
+              <li class="white tooltipstered" data-class="white_p2" data-color="White"><span style="display: none;">White</span></li>
+              <li class="blue tooltipstered" data-class="blue_p2" data-color="Blue"><span style="display: none;">Blue</span></li>
+              <li class="sliver tooltipstered" data-class="sliver_p2" data-color="Sliver"><span style="display: none;">Silver</span></li>
+            </menu>
+          </div>
+        </div>
+      </div>
+
+      <!--                    <div class="col-lg-6">
+                              <ul class="images">
+
+                                  <li class="black active"><img src="assets/images/pen/black_p1.jpg"></li>
+                                  <li class="magenta"><img src="assets/images/pen/magenta_P1.jpg"></li>
+                                  <li class="orange"><img src="assets/images/pen/orange_P1.jpg"></li>
+                                  <li class="white"><img src="assets/images/pen/whtie_P1.jpg"></li>
+                                  <li class="blue"><img src="assets/images/pen/blue_P1.jpg"></li>
+                                  <li class="silver"><img src="assets/images/pen/sliver_P1.jpg"></li>
+                              </ul>
+                              <menu class="colors">
+                                  <li class="black tooltipstered active" data-color="Black"><span>Black</span></li>
+                                  <li class="magenta tooltipstered" data-color="Magenta"><span>Magenta</span></li>
+                                  <li class="orange tooltipstered" data-color="Orange"><span>Orange</span></li>
+                                  <li class="white tooltipstered" data-color="White"><span>White</span></li>
+                                  <li class="blue tooltipstered" data-color="Blue"><span>Blue</span></li>
+                                  <li class="sliver tooltipstered" data-color="Sliver"><span>Silver</span></li>
+                              </menu>
+                          </div>
+                          <div class="col-lg-6">
+                              <ul class="images">
+
+                                  <li class="black active"><img src="assets/images/pen/black_P2.jpg"></li>
+                                  <li class="magenta"><img src="assets/images/pen/magenta_P2.jpg"></li>
+                                  <li class="orange"><img src="assets/images/pen/orange_P2.jpg"></li>
+                                  <li class="white"><img src="assets/images/pen/whtie_P2.jpg"></li>
+                                  <li class="blue"><img src="assets/images/pen/blue_P2.jpg"></li>
+                                  <li class="silver"><img src="assets/images/pen/sliver_P2.jpg"></li>
+                              </ul>
+                              <menu class="colors">
+                                  <li class="black tooltipstered active" data-color="Black"><span>Black</span></li>
+                                  <li class="magenta tooltipstered" data-color="Magenta"><span>Magenta</span></li>
+                                  <li class="orange tooltipstered" data-color="Orange"><span>Orange</span></li>
+                                  <li class="white tooltipstered" data-color="White"><span>White</span></li>
+                                  <li class="blue tooltipstered" data-color="Blue"><span>Blue</span></li>
+                                  <li class="sliver tooltipstered" data-color="Sliver"><span>Silver</span></li>
+                              </menu>
+                          </div>-->
+    </div>
+
+
+  </div>
+</section>
+
+<!-- slider Form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- newslattewr section -->
+<section class="section" id="newsletter">
+
+  <div class="inner_sec offsetTop">
+    <!-- Container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <header class="text-center">
+            <!-- Icon (Font-Awesome) or Image -->
+            <div class="social" style="text-align:right">
+              <span style="line-height:24px; margin-right:15px; color:#FFFFFF;">SHARE</span>
+              <a title="Twitter" onClick="shareTo( 'twitter', 'Worlds First Color Picker Pen That Reproduces Any Color', '#share-image' )"><i class="fa fa-twitter"></i></a>
+              <a title="Facebook" onClick="shareTo( 'facebook', '#share-title', '#share-image' )"><i class="fa fa-facebook"></i></a>
+              <a title="Google+" onClick="shareTo( 'google', '#share-title', '#share-image' )"><i class="fa fa-google-plus"></i></a>
+              <!-- <a title="Share" onClick="shareTo( 'share', '#share-title', '#share-image' )"><i class="fa fa-share"></i></a>-->
+              <!--<a title="Pinterest" onClick="shareTo( 'pinterest', '#share-title', '#share-image' )"><i class="fa fa-pinterest"></i></a>
+              <a title="LinkedIn" onClick="shareTo( 'linkedin', '#share-title', '#share-image' )"><i class="fa fa-linkedin"></i></a>-->
+            </div>
+
+            <!--h2>Join Our Newsletter</h2!-->
+            <h2>STAY IN TOUCH</h2>
+          </header>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center sub_para">
+          <p>Be The First To Know When It'll Become Available</p>
+          <p>20% OFF for a limited time. </p>
+        </div>
+      </div>
+    </div>
+    <!-- Delimiter -->
+
+    <!-- Services -->
+    <div class="container">
+
+      <div class="row services nsltr_form_sec ">
+
+
+        <ul>
+
+
+          <form action="http://getscribblepen.us8.list-manage2.com/subscribe/post" method="POST">
+            <input type="hidden" name="u" value="d2697b0380b8bdcd425ead78f">
+            <input type="hidden" name="id" value="6433f00354">
+            <li><input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" placeholder="enter your email here" ></li>
+            <li style="margin-top:2px;"><input type="submit" name="submit" value="NOTIFY ME"></li>
+
+
+          </form>
+
+          <!--<form action="http://eepurl.com/VnKsH" target="_blank" >
+          <li><input type="text"  value="Enter your Email" onFocus="this.value=''" onBlur="this.value='Enter your Email'"/></li>
+          <li style="margin-top:2px;"><input type="submit" value="Notify Me" /></li>
+         </form>-->
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- picture Sec -->
+<section class="section picture_sec" id="">
+  <div class="inner_sec">
+    <img src="images/pen_img33.jpg">
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Features
+<section class="section offsetTop offsetBottom" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-8 col-xs-12">
+                <header class="offsetBottomS">
+                    <h2>Features of Prodo theme</h2>
+                </header>
+            </div>
+            <!-- Content
+            <div class="animation animation-from-bottom">
+                <img src="images/demo/ipad.jpg" alt="iPad" class="offsetTopS col-md-6 col-sm-4 col-xs-6 pull-right img-responsive big-ipad">
+            </div>
+            <div class="col-md-6 col-sm-8">
+                <h4 class="offsetTopS offsetBottomS">Unlimited Colors</h4>
+                <p>
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas commodo risus non massa ullamcorper imperdiet. Duis id sollicitudin sapien, id consequat leo. Duis rutrum nisl tempus elementum dignissim.
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h4 class="offsetTopS offsetBottomS">Sticky Header</h4>
+                <p>
+                    Aenean consequat sagittis nibh quis euismod. Donec interdum ultricies leo, at placerat eros vestibulum vitae. Nullam sit amet adipiscing. Phasellus rhoncus. Integer at neque aliquet, lobortis arcu id, consectetur mauris. Duis accumsan ut ultricies. Quisque commodo, sem vitae ornare lacinia, ante orci rutrum.
+                </p>
+
+                <h4 class="offsetTopS offsetBottomS">Based on Bootstrap</h4>
+                <p class="offsetBottomS">
+                    Nam vitae porta felis, ut vulputate justo. Proin eu risus eros. Pellentesque viverra neque nec turpis vestibulum, vitae tempus velit eleifend. Pellentesque adipiscing arcu sit amet lacus fringilla, eu accumsan justo lacinia.
+                </p>
+                <!-- Buttons
+                <div class="offsetTopS">
+                    <a href="http://themeforest.net/user/Axminenko/portfolio?ref=Axminenko" class="btn btn-default">
+                        <i class="fa fa-rocket"></i>
+                        Purchase
+                    </a>
+                    <a href="#try" class="btn btn-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio
+<section class="section offsetTop" id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="offsetBottom">
+                    <h2>Favorite Projects</h2>
+                </header>
+            </div>
+        </div>
+        <!-- Filters
+        <div class="row">
+            <div class="col-md-12 portfolio-filters">
+                <a href="#" data-filter="*" class="active">All</a>
+                <a href="#" data-filter=".photography">Photography</a>
+                <a href="#" data-filter=".illustration">Illustration</a>
+                <a href="#" data-filter=".branding">Branding</a>
+                <a href="#" data-filter=".personal">Personal</a>
+            </div>
+        </div>
+    </div>
+    <!-- Content
+    <div class="container-fluid offsetTop">
+        <div class="row portfolio-items clearfix" data-on-line-lg="5" data-on-line-md="5" data-on-line-sm="4" data-on-line-xs="2">
+            <!-- Project 1
+            <div class="animation animation-from-left">
+                <div class="portfolio-item branding" rel="item-one">
+                    <img src="images/demo/portfolio/1.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Branding</div>
+                    <a href="#" data-url="portfolio/sample-one.html"></a>
+                </div>
+            </div>
+            <!-- Project 2
+            <div class="animation animation-from-left">
+                <div class="portfolio-item branding" rel="item-two">
+                    <img src="images/demo/portfolio/2.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Branding</div>
+                    <a href="#" data-url="portfolio/sample-two.html"></a>
+                </div>
+            </div>
+            <!-- Project 3
+            <div class="animation animation-from-left">
+                <div class="portfolio-item personal" rel="item-three">
+                    <img src="images/demo/portfolio/3.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Personal</div>
+                    <a href="#" data-url="portfolio/sample-three.html"></a>
+                </div>
+            </div>
+            <!-- Project 4
+            <div class="animation animation-from-left">
+                <div class="portfolio-item photography" rel="item-four">
+                    <img src="images/demo/portfolio/4.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Photography</div>
+                    <a href="#" data-url="portfolio/sample-four.html"></a>
+                </div>
+            </div>
+            <!-- Project 5
+            <div class="animation animation-from-left">
+                <div class="portfolio-item illustration" rel="item-five">
+                    <img src="images/demo/portfolio/5.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Illustration</div>
+                    <a href="#" data-url="portfolio/sample-five.html"></a>
+                </div>
+            </div>
+            <!-- Project 6
+            <div class="animation animation-from-left">
+                <div class="portfolio-item personal" rel="item-six">
+                    <img src="images/demo/portfolio/6.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Personal</div>
+                    <a href="#" data-url="portfolio/sample-one.html"></a>
+                </div>
+            </div>
+            <!-- Project 7
+            <div class="animation animation-from-left">
+                <div class="portfolio-item photography" rel="item-seven">
+                    <img src="images/demo/portfolio/7.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Photography</div>
+                    <a href="#" data-url="portfolio/sample-two.html"></a>
+                </div>
+            </div>
+            <!-- Project 8
+            <div class="animation animation-from-left">
+                <div class="portfolio-item illustration" rel="item-eight">
+                    <img src="images/demo/portfolio/8.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Illustration</div>
+                    <a href="#" data-url="portfolio/sample-three.html"></a>
+                </div>
+            </div>
+            <!-- Project 9
+            <div class="animation animation-from-left">
+                <div class="portfolio-item photography" rel="item-nine">
+                    <img src="images/demo/portfolio/9.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Photography</div>
+                    <a href="#" data-url="portfolio/sample-four.html"></a>
+                </div>
+            </div>
+            <!-- Project 10
+            <div class="animation animation-from-left">
+                <div class="portfolio-item photography" rel="item-ten">
+                    <img src="images/demo/portfolio/10.jpg" alt="Project">
+                    <div class="overlay"></div>
+                    <div class="details">Photography</div>
+                    <a href="#" data-url="portfolio/sample-five.html"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Info-box (Contact Us)
+<section class="section info-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 text-center-xs">
+                <h3>Do you have an ideas? Contact us now!</h3>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-4 pull-right text-center-xs">
+                <a href="#contact" class="btn btn-default">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Details (AJAX)
+<section>
+    <div class="section offsetTop offsetBottomL" id="portfolio-details"></div>
+</section>
+
+<!-- Try Prodo
+<section class="section offsetTop offsetBottom" id="try">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center offsetBottom">
+                    <h2>Try Prodo</h2>
+                    <p class="info">
+                        Prodo can automatically adapt to many screen sizes thanks to its responsive capabilities.<br>
+                        Try resizing your browser window to see the adaptation.
+                    </p>
+                </header>
+            </div>
+        </div>
+        <!-- Content
+        <div class="row">
+            <div class="animation animation-from-left">
+                <img src="images/demo/iphone.jpg" alt="iPhone" class="img-responsive col-lg-4 col-md-4 col-xs-5 pull-left img-responsive">
+            </div>
+            <div class="offsetTop visible-lg"></div>
+            <div class="col-md-8">
+                <h4 class="offsetBottomS">Font Awesome</h4>
+                <p>
+                    Phasellus non luctus dui, et interdum eros. Integer at dapibus dui. Etiam dictum pulvinar dolor. Vivamus magna nibh, accumsan a tortor et, porttitor condimentum urna. Donec hendrerit luctus aliquam. In nec mattis odio. Sed ultricies vehicula mi, a hendrerit lacus facilisis placerat. Maecenas varius ipsum leo ut tempor.
+                </p>
+            </div>
+            <div class="col-md-8">
+                <h4 class="offsetTopS offsetBottomS">Excellent Support</h4>
+                <p class="offsetBottomS">
+                    Phasellus non luctus dui, et interdum eros. Integer at dapibus dui. Etiam dictum pulvinar dolor. Vivamus magna nibh, accumsan a tortor et, porttitor condimentum urna. Donec hendrerit luctus aliquam. In nec mattis odio. Sed ultricies vehicula mi, a hendrerit lacus facilisis placerat. Maecenas varius ipsum leo ut tempor.
+                </p>
+                <!-- Buttons
+                <div>
+                    <a href="http://themeforest.net/user/Axminenko/portfolio?ref=Axminenko" class="btn btn-default">
+                        <i class="fa fa-cloud-download"></i>
+                        Purchase
+                    </a>
+                    <a href="#contact" class="btn btn-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Section
+<section class="section alt-background offsetTop offsetBottomL">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-7 offsetTopS pull-right no-right-xs">
+                <div class="offsetTopS hidden-xs"></div>
+                <div class="video-responsive animation animation-from-bottom">
+                    <iframe src="//player.vimeo.com/video/77128496" allowfullscreen></iframe>
+                </div>
+                <div class="offsetBottom visible-xs"></div>
+            </div>
+            <div class="col-md-6 col-sm-5">
+                <header class="offsetBottomS">
+                    <h2>Video Section</h2>
+                    <p class="info">
+                        Phasellus non luctus dui, et interdum eros. Integer at dapibus dui. Etiam dictum pulvinar dolor. Vivamus magna, accumsan a tortor et porttitor. Donec luctus hendrerit aliquam. In nec mattis odio.
+                    </p>
+                </header>
+            </div>
+            <div class="col-md-6 col-sm-12 offsetBottomS">
+                <div class="offsetBottomS">
+                    <h4>Etiam eleifend tincidunt</h4>
+                </div>
+                <p>
+                    Suspendisse non faucibus nisl. Curabitur vel nunc neque consequat varius acse lacus. Cum sociis natoque penatibus et magnis dis parturient. Vimus magna, accumsan a tortor et porttitor. Donec luctus hendrerit aliquam.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section with Video Background
+<section class="section video hidden-xs" data-source="tDvBwPzJ7dY" data-hide-on-another="true" data-start="30">
+    <div class="video-container">
+        <!-- Overlay (You can add class .colored, or delete it)
+        <div class="video-overlay"></div>
+        <!-- Container
+        <div class="container offsetTopX offsetBottomX">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <header>
+                        <div class="icon"><i class="fa fa-video-camera"></i></div>
+                        <h1>Yes, It also video section!</h1>
+                        <h3 class="text-light opacity8 offsetTopS">
+                            Etiam hendrerit est eu ullamcorper convallis.<br>
+                            Ut congue neque mattis, egestas augue vitae, ornare orci.
+                        </h3>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it looks
+<section class="section offsetTopL offsetBottomS">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center offsetBottom">
+                    <h2>How it looks</h2>
+                    <p class="info">Quisque mattis nisi quis ultricies semper. In mollis hendrerit porttitor.</p>
+                </header>
+            </div>
+        </div>
+        <!-- Content
+        <div class="row">
+            <div class="col-md-12">
+                <div class="imacs">
+                    <div class="item left hidden-xs"><img src="images/demo/imac-left.png" width="429" class="img-responsive" alt="Sample"></div>
+                    <div class="item right hidden-xs"><img src="images/demo/imac-right.png" width="429" class="img-responsive" alt="Sample"></div>
+                    <div class="item center"><img src="images/demo/imac-center.png" width="489" class="img-responsive center-block" alt="Sample"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Team
+<section class="section offsetTop" id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center offsetBottom">
+                    <h2>Our Team</h2>
+                    <p class="info">
+                        Morbi dignissim turpis urna, ac consequat purus eleifend at.<br>
+                        Curabitur at fringilla urna. Curabitur auctor cursus ligula vitae tristique.
+                    </p>
+                </header>
+            </div>
+        </div>
+        <!-- Content
+        <div class="row team">
+            <!-- Cell 1
+            <div class="col-md-4 col-sm-4 col-xs-6 offsetBottomL animation animation-from-bottom">
+                <div class="photo">
+                    <img src="images/demo/team/people-1.jpg" class="img-responsive img-rounded" alt="Photo">
+                </div>
+                <div class="details">
+                    <h4>Jessie Smith</h4>
+                    <span>Founder</span>
+                </div>
+                <div class="social">
+                    <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Cell 2
+            <div class="col-md-4 col-sm-4 col-xs-6 offsetBottomL animation animation-from-bottom">
+                <div class="photo">
+                    <img src="images/demo/team/people-2.jpg" class="img-responsive img-rounded" alt="Photo">
+                </div>
+                <div class="details">
+                    <h4>Frances Doe</h4>
+                    <span>UI Designer</span>
+                </div>
+                <div class="social">
+                    <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Cell 3
+            <div class="col-md-4 col-sm-4 col-xs-6 col-md-offset-0 col-sm-offset-0 col-xs-offset-3 offsetBottomL animation animation-from-bottom">
+                <div class="photo">
+                    <img src="images/demo/team/people-3.jpg" class="img-responsive img-rounded" alt="Photo">
+                </div>
+                <div class="details">
+                    <h4>Ashley Doe</h4>
+                    <span>Illustrator</span>
+                </div>
+                <div class="social">
+                    <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info-box (Subscribe)
+<section class="section info-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                <input type="email" name="subscribe" class="text-center-xs" placeholder="Enter your Email">
+                <div class="visible-xs offsetTopS"></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 text-center-xs">
+                <button class="btn btn-default pull-right">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax (Twitter Feed)
+<section class="section parallax" data-image="images/demo/parallax/image-1.jpg">
+    <div class="parallax-container">
+        <!-- Overlay (You can add class .colored, or delete it)
+        <div class="parallax-overlay"></div>
+        <!-- Content
+        <div class="container twitter offsetTopX offsetBottomX">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="text-center offsetBottom">
+                        <div class="icon large"><i class="fa fa-twitter"></i></div>
+                    </header>
+                </div>
+            </div>
+            <div class="row twitter text-center">
+                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                    <!-- You can add to .twitter-feed attr.: data-delay="7000"
+                    <div class="twitter-feed" data-user="envato" data-arrows=".twitter-arrows"></div>
+                    <div class="offsetTopS">
+                        <a href="https://twitter.com/envato" class="twitter-author">@envato</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Arrows
+            <div class="row arrows twitter-arrows text-center">
+                <a class="arrow left"><i class="fa fa-chevron-left"></i></a>
+                <a class="arrow right"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Skills
+<section class="section offsetTop offsetBottom" id="skills">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center offsetBottom">
+                    <h2>Our Skills</h2>
+                    <p class="info">
+                        Etiam hendrerit est eu ullamcorper convallis. Morbi semper ut nulla ut iaculis.<br>
+                        Ut congue neque mattis, egestas augue vitae, ornare orci.
+                    </p>
+                </header>
+            </div>
+        </div>
+        <!-- Content
+        <div class="row circular-bars clearfix" data-on-error-hide="#skills">
+            <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-4 text-center">
+                <input data-value="90" disabled>
+                <h5>Web Design</h5>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-4 text-center">
+                <input data-value="95" disabled>
+                <h5>HTML5 / CSS3</h5>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-4 text-center">
+                <input data-value="85" disabled>
+                <h5>Graphic Design</h5>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-4 col-xs-offset-2 col-md-offset-0 col-sm-offset-0 text-center">
+                <input data-value="75" disabled>
+                <h5>WordPress</h5>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-4 text-center">
+                <input data-value="80" disabled>
+                <h5>PHP5</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients
+<section class="section offsetTop offsetBottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center offsetBottom">
+                    <h2>Clients</h2>
+                    <p class="info">Nam vitae porta felis, ut vulputate justo. Proin eu risus eros.</p>
+                </header>
+            </div>
+        </div>
+        <!-- Content
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6 animation animation-from-left">
+                <img src="images/demo/clients/company-1.png" width="180" class="img-responsive center-block" alt="Company">
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 animation animation-from-left">
+                <img src="images/demo/clients/company-2.png" width="180" class="img-responsive center-block" alt="Company">
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 animation animation-from-left">
+                <img src="images/demo/clients/company-3.png" width="180" class="img-responsive center-block" alt="Company">
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 animation animation-from-left">
+                <img src="images/demo/clients/company-4.png" width="180" class="img-responsive center-block" alt="Company">
+            </div>
+        </div>
+        <!-- Testimonial
+        <div class="row text-center offsetTopS">
+            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                <h3>Supposing is good, but finding out is better.</h3>
+                <span>Mark Twain</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax (Contact Info)
+<section class="section parallax" data-image="images/demo/parallax/image-2.jpg">
+    <div class="parallax-container">
+        <!-- Overlay (You can add class .colored, or delete it)
+        <div class="parallax-overlay"></div>
+        <!-- Container
+        <div class="container offsetTopX offsetBottomX">
+            <!-- Phone
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="large-info">
+                        <i class="fa fa-phone"></i>
+                        310-111-0000
+                    </div>
+                </div>
+            </div>
+            <!-- E-Mail
+            <div class="row text-center offsetTopS">
+                <div class="col-md-12">
+                    <i class="fa fa-envelope contact-icon"></i>
+                    <p class="contact-info">
+                        <a href="mailto:a.axminenko@gmail.com">a.axminenko@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Address
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <i class="fa fa-map-marker contact-icon"></i>
+                    <p class="contact-info">
+                        <a href="#google-map">5 Park Avenue, New York, NY 10016</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- press -->
+
+<section class="section picture_sec" id="specification">
+  <div class="inner_sec">
+    <img src="images/speci.jpg">
+  </div>
+</section>
+
+
+
+<section class="section " id="press">
+  <div class="inner_sec offsetTop">
+    <!-- Container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header class="text-center">
+            <!-- Icon (Font-Awesome) or Image -->
+            <h2>Download Press Kit</h2>
+          </header>
+        </div>
+      </div>
+      <!--<div class="row offsetBottomL">
+          <div class="col-md-10 col-md-offset-1 text-center sub_para">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+standard dummy text ever since the 1500s, when an unknown printer took. </p>
+          </div>
+      </div>-->
+    </div>
+    <!-- Delimiter -->
+
+    <!-- Services -->
+    <div class="container">
+      <div class="row services">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-center">
+          <a class="icon-download" href="/Scribble_Press_Kit.zip">Download Presskit</a>
+          <p>For further information, please send us an e-mail</p>
+          <p class="email">contact@getscribblepen.com</p>
+        </div>
+        <!-- Cell 1 -->
+        <!--<div class="col-md-6 col-sm-6 col-xs-12 text-center offsetBottomL animation animation-from-left">
+            <div>
+                <img src="images/press_logo.png">
+                <p class="press_text">We never seem to be able to ditch the lumpy power brick, that mid-cable eyesore that takes up tons of space in your bag. MIT project turned startup FINsix wants to change all that.</p>
+            </div>
+        </div>-->
+        <!-- Cell 2 -->
+        <!--<div class="col-md-6 col-sm-6 col-xs-12 text-center offsetBottomL animation animation-from-left">
+            <div>
+                <img src="images/press_logo.png">
+                <p class="press_text">We never seem to be able to ditch the lumpy power brick, that mid-cable eyesore that takes up tons of space in your bag. MIT project turned startup FINsix wants to change all that.</p>
+            </div>
+        </div>-->
+        <!-- Cell 3 -->
+        <!--<div class="col-md-6 col-sm-6 col-xs-12 text-center offsetBottomL animation animation-from-left">
+            <div>
+                <img src="images/press_logo.png">
+                <p class="press_text">We never seem to be able to ditch the lumpy power brick, that mid-cable eyesore that takes up tons of space in your bag. MIT project turned startup FINsix wants to change all that.</p>
+            </div>
+        </div>-->
+
+        <!-- Cell 4 -->
+        <!--<div class="col-md-6 col-sm-6 col-xs-12 text-center offsetBottomL animation animation-from-left">
+            <div>
+                <img src="images/press_logo.png">
+                <p class="press_text">We never seem to be able to ditch the lumpy power brick, that mid-cable eyesore that takes up tons of space in your bag. MIT project turned startup FINsix wants to change all that.</p>
+            </div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Contact Form -->
+<!--<section class="section offsetBottom" id="contact">
+    <div class="inner_sec2">
+    <div class="container contact-form">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center offsetBottom">
+                    <h2>Get in Touch</h2>
+                    <p class="info sub_para">
+                        Feel free to drop us a line! Fusce dapibus, tellus commodo tortor.<br>
+                        Mauris condimentum utellus fermentum, porta sem.
+                    </p>
+                </header>
+            </div>
+        </div>
+
+        <div class="contact-form-area">
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="field">
+                        <input type="text" name="name" class="field-name" placeholder="Name">
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" class="field-email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <input type="text" name="phone" class="field-phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="field">
+                        <textarea name="message" class="field-message" placeholder="Message"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn" id="contact-submit">Send Message</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-result">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Thank You for the Email!</h3>
+                    <p>Your message has already arrived! We'll contact you shortly.</p>
+                    <h5>Goog day.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>-->
+
+<!-- Google Map -->
+<!--<section class="section map">
+
+    <div id="google-map" data-latitude="40.706279" data-longitude="-74.005121"></div>
+
+    <div id="map-info">
+        <div id="content">
+            <div id="siteNotice"></div>
+            <h4 id="firstHeading" class="firstHeading">About Prodo theme</h4>
+            <div id="bodyContent">
+                <p>
+                    Vestibulum sit amet sagittis nibh, at tempor lorem.<br>
+                    Donec iaculis urna at dapibus dignissim.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- Footer -->
+<div style="height:70px; background-color:#ccc; ">
+  <center>
+    <table border="0" cellpadding="15">
+      <tr>
+        <td>
+          <a target="_blank" href="http://www.psfk.com/2014/05/custom-ink-matching-pen-scribble.html#!RtRYA"><img src="badges/1.png" border="0" height="40"/></a>
+        </td><td>
+        <a target="_blank" href="http://www.gizmag.com/scribble-color-picking-pen-ink-stylus/32269/"><img src="badges/2.png" border="0" height="40"/></a>
+      </td><td>
+        <a target="_blank" href="http://www.dailymail.co.uk/sciencetech/article-2647129/Forget-crayons-Multicolour-pen-lets-pick-colour-draw-16-million-shades.html"><img src="badges/3.png" border="0" height="40"/></a>
+      </td><td>
+        <a target="_blank" href="http://www.huffingtonpost.com/2014/06/05/scribble-pen-so-many-colorz_n_5452287.html?ncid=fcbklnkushpmg00000063"><img src="badges/4.png" border="0" height="40"/></a>
+      </td><td align="center" width="120">
+
+
+        <a target="_blank" href="http://www.briefingwire.com/pr/scribble-announces-kickstarter-campaign-being-launched-to-crowdfund-worlds-first-color-picker-pen"><img src="badges/7.png" border="0"/></a>
+      </td><td>
+        <a target="_blank" href="http://www.tuvie.com/scribble-pen-color-picker-pen-by-mark-barker-and-robert-hoffman/"><img src="badges/8.png" border="0" height="40"/></a>
+      </td><td>
+        <a target="_blank" href="http://www.springwise.com/16-million-color-pen-match-ink-shade-real-world-object/"><img src="badges/7.jpg" border="0" height="40"/></a>
+      </td><td>
+        <a target="_blank" href="http://www.cnet.com/news/the-pen-that-can-write-in-any-color-on-earth/"><img src="badges/9.png" border="0" height="40"/></a>
+      </td><td>
+      </td>
+      </tr>
+    </table>
+  </center>
+</div>
+<footer class="footer offsetTopS offsetBottomS">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <!-- Back to Top -->
+        <a class="to-top"><i class="fa fa-angle-up"></i></a>
+        <!-- Copyright -->
+        <span>2014 &copy; SCRIBBLE All rights reserved.</span>
+      </div>
+      <!--<div class="col-sm-12">
+       <ul class="ftr_link">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">partnership</a></li>
+          </ul>
+      </div>-->
+      <div class="col-md-6 col-sm-6 social">
+        <a href="privacy-policy.html" style="color:#FFFFFF; font-size:12px;">Privacy Policy</a>&nbsp;|&nbsp;<a href="/blog" style="color:#FFFFFF; font-size:12px;">Blog</a>&nbsp;|&nbsp;<a href="mailto:partnership@getscribblepen.com" style="color:#FFFFFF; font-size:12px;">Partnership</a>&nbsp;|&nbsp;<a href="mailto:contact@getscribblepen.com" style="color:#FFFFFF; font-size:12px;">Contact us</a>&nbsp;&nbsp;
+        <a target="_blank" href="https://www.facebook.com/scribblecolor"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" href="https://twitter.com/scribblecolor"><i class="fa fa-twitter"></i></a>
+        <!--<a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>-->
+        <a target="_blank" href="https://plus.google.com/115237251484578868001" rel="publisher">Google+</a><i class="fa fa-google-plus"></i></a>
+      </div>
+      <!--
+
+       </div>-->
+
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.js"></script>
+
+
+
+<!-- Google Maps Support -->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<!-- Other Scripts -->
+
+<script src="js/finsix-503f3555.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/jquery.scrollto.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+
+
+
+<script src="js/jquery.mb.ytplayer.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.tweet.min.js"></script>
+<!-- Main Script -->
+<script src="js/prodo.min.js"></script>
+<script src="js/pen_hover.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
