@@ -29,13 +29,6 @@
     url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-.hidden
-{
-  display: none;
-}
-.pull-left {
-    float: left;
-}
-.pull-right {
-    float: right;
+table.footer-logos tr td {
+    padding: 15px 7px;
 }
