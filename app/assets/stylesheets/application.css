@@ -32,3 +32,256 @@
 table.footer-logos tr td {
     padding: 15px 7px;
 }
+
+
+.price-list-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+.price-list-wrapper {
+    width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.price-list-left {
+    width: 490px;
+    float: left;
+}
+.price-list-left ul {
+    margin: 0;
+    padding: 0;
+}
+.price-list-left ul li {
+    overflow: hidden;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #f8f9f8;
+    margin-bottom: 10px;
+    color: #EA7134;
+}
+.price-list-left .details {
+    width: 40%;
+    float: left;
+    padding-top: 20px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+.price-list-left .big-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 20px;
+}
+.price-list-left .description {
+    margin: 0;
+    line-height: 14px;
+    font-size: 11px;
+}
+.price-list-left .quantity {
+    width: 7%;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 18px;
+    text-align: right;
+}
+.price-list-left .image {
+    width: 28%;
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+.price-list-left .image img {
+    height: 100%;
+}
+.price-list-left .price {
+    width: 25%;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 18px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.price-list-right {
+    width: 470px;
+    margin-left: 60px;
+    float: left;
+    text-shadow: none;
+}
+.price-list-right ul {
+    margin: 0;
+    padding: 0;
+}
+.price-list-right ul li {
+    overflow: hidden;
+    height: 85px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #f8f9f8;
+    margin-bottom: 4px;
+    color: #EA7134;
+}
+.price-list-right .item-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.price-list-right .details {
+    width: 45%;
+    float: left;
+    padding-top: 27px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+.price-list-right .item-status {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+}
+.price-list-right .all-gone-bg {
+    background: #F4A799;
+}
+.price-list-right .item-status.new {
+    color: #ffffff;
+    background: #EA7134;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 17px;
+    width: 35px;
+    text-align: center;
+}
+.price-list-right .item-status.all-gone {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.price-list-right .item-title {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 10px;
+    margin: 0;
+}
+.price-list-right .item-model {
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0;
+}
+.price-list-right .item-description {
+    line-height: 13px;
+    margin: 0;
+    font-size: 9px;
+}
+.price-list-right .item-image {
+    width: 28%;
+    float: left;
+    height: 100%;
+}
+.price-list-right .item-image img {
+    height: 65px;
+    margin-top: 10px;
+}
+.price-list-right .item-price {
+    width: 27%;
+    float: left;
+    padding: 20px 5px 0 0;
+}
+
+.price-list-right .item-price .price-one { overflow: hidden; width: 100%; text-align: right; }
+.price-list-right .item-price .price-two { overflow: hidden; width: 100%; text-align: right; color: #555; }
+
+.color333 {
+    color: #333;
+}
+
+
+.price-list-right .item-price .price-one span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.price-list-right .item-price .price-one .dollar-big {
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: bold;
+}
+.price-list-right .item-price .price-one .price-big {
+    font-size: 27px;
+    line-height: 20px;
+}
+.price-list-right .item-price .price-one .float-wrapper {
+    width: 26px;
+    overflow: hidden;
+}
+.price-list-right .item-price .price-one .float-big {
+    line-height: 10px;
+    float: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+.price-list-right .item-price .price-one .currency-big {
+    line-height: 13px;
+    float: left;
+    font-size: 9px;
+}
+
+
+
+.price-list-right .item-price .price-two span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.price-list-right .item-price .price-two .dollar-big {
+    font-size: 12px;
+    overflow: hidden;
+}
+.price-list-right .item-price .price-two .price-big {
+    font-size: 19px;
+    line-height: 14px;
+}
+.price-list-right .item-price .price-two .float-wrapper {
+    width: 26px;
+    overflow: hidden;
+}
+.price-list-right .item-price .price-two .float-big {
+    line-height: 9px;
+    float: left;
+    font-size: 10px;
+}
+.price-list-right .item-price .price-two .currency-big {
+    line-height: 9px;
+    float: left;
+    font-size: 9px;
+}
+
+
+
+@media (max-width: 767px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,4 +4,8 @@ class HomeController < ApplicationController
       format.html { }
     end
   end
+
+  def price_list
+
+  end
 end
