@@ -265,8 +265,13 @@ table.footer-logos tr td {
 
 
 
-@media (max-width: 767px) {
-
+@media (max-width: 1170px) and (min-width: 320px) {
+    .price-list-wrapper {
+        width: 490px;
+    }
+    .price-list-right {
+        margin-left: 0;
+    }
 }
 
 
