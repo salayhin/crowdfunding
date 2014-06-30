@@ -7,7 +7,7 @@ class ChargesController < ApplicationController
     payment_option = PaymentOption.find(payment_option_id)
     price = payment_option.amount
 
-    @order = Order.prefill!(:name => params[:stripeBillingName], :price => params[:amount], :user_id => @user.id, :payment_option => params[:payment_option])
+    @order = Order.prefill!(:name => params[:stripeBillingName], :price => params[:amount], :user_id => @user.id, :payment_option => payment_option)
 
     customer = Stripe::Customer.create(
         :email => params[:stripeEmail],

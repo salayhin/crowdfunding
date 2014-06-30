@@ -20,20 +20,24 @@ class Order < ActiveRecord::Base
 
   # After authenticating with Amazon, we get the rest of the details
   def self.postfill!(options = {})
-    @order = Order.find_by!(:uuid => options[:callerReference])
-    @order.token             = options[:tokenID]
-    if @order.token.present?
-      @order.address_one     = options[:addressLine1]
-      @order.address_two     = options[:addressLine2]
-      @order.city            = options[:city]
-      @order.state           = options[:state]
-      @order.status          = options[:status]
-      @order.zip             = options[:zip]
-      @order.phone           = options[:phoneNumber]
-      @order.country         = options[:country]
-      @order.expiration      = Date.parse(options[:expiry])
+    @order = Order.find_by!(:uuid => options[:metadata][:order_id])
+    #@order.token             = options[:tokenID]
+    @order.stripe_charge_id = options[:id]
+    if @order.stripe_charge_id.present?
+      @order.name            = options[:card][:name]
+      @order.address_one     = options[:card][:address_line1]
+      @order.address_two     = options[:card][:address_line2]
+      @order.city            = options[:card][:address_city]
+      @order.state           = options[:card][:address_state]
+      @order.is_paid         = options[:paid]
+      @order.zip             = options[:card][:address_zip]
+      @order.country         = options[:card][:address_country]
+      @order.stripe_customer_id = options[:customer]
+      @order.card_last_4_digit = options[:card][:last4]
+      @order.card_brand = options[:card][:brand]
+      @order.card_exp_month = options[:card][:exp_month]
+      @order.card_exp_year = options[:card][:exp_year]
       @order.save!
-
       @order
     end
   end

@@ -16,12 +16,12 @@
                     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                             data-description="Pre Order"
-                            data-amount="<%= payment_option.amount %>"
+                            data-amount="<%= (payment_option.amount * 100).round %>"
                             data-allow-remember-me="false"
                             data-shipping-address="true">
 
                     </script>
-                    <%= hidden_field_tag 'amount', payment_option.amount %>
+                    <%= hidden_field_tag 'amount', (payment_option.amount * 100).round %>
                     <%= hidden_field_tag 'payment_option', payment_option.id %>
                 <% end %>
               </li>
