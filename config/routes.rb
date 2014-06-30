@@ -1,4 +1,6 @@
 Selfstarter::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root :to => 'preorder#index'
   match '/preorder'               => 'preorder#index', :via => [:get,:post]
   get 'preorder/checkout'
