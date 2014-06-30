@@ -3,25 +3,27 @@
       <div class="price-list-left">
         <ul>
 
-          <% Array(0..5).each do |item| %>
+          <% @PaymentOptions.each do |payment_option| %>
 
               <li>
                 <div class="details">
-                  <p class="description">Thank You Message from Scribble creators</p>
+                  <p class="description"><%= payment_option.description.html_safe %></p>
                 </div>
                 <div class="quantity">5X</div>
                 <div class="image"><%= image_tag 'pen.jpg' %></div>
-                <div class="price">$79</div>
-              </li>
+                <div class="price"><%= payment_option.amount_display %></div>
+                <%= form_tag charges_path do %>
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                            data-description="Pre Order"
+                            data-amount="<%= payment_option.amount %>"
+                            data-allow-remember-me="false"
+                            data-shipping-address="true">
 
-              <li>
-                <div class="details">
-                  <p class="big-title">SUPER EARLY BIRD</p>
-                  <p class="description">Thank You Message</p>
-                </div>
-                <div class="quantity">500X</div>
-                <div class="image"><%= image_tag 'pen.jpg' %></div>
-                <div class="price">$79</div>
+                    </script>
+                    <%= hidden_field_tag 'amount', payment_option.amount %>
+                    <%= hidden_field_tag 'payment_option', payment_option.id %>
+                <% end %>
               </li>
 
           <% end %>

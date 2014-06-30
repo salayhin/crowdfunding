@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130107010733) do
+ActiveRecord::Schema.define(version: 20140630022859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20130107010733) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "payment_option_id"
+    t.string   "stripe_charge_id"
+    t.string   "stripe_customer_id"
+    t.integer  "card_last_4_digit"
+    t.string   "card_brand"
+    t.integer  "card_exp_month"
+    t.integer  "card_exp_year"
+    t.boolean  "is_refunded"
+    t.float    "refund_amount"
   end
 
   create_table "payment_options", force: true do |t|

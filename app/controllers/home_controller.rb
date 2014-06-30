@@ -6,6 +6,6 @@ class HomeController < ApplicationController
   end
 
   def price_list
-
+    @PaymentOptions = PaymentOption.all
   end
 end
