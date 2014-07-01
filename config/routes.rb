@@ -9,4 +9,5 @@ Selfstarter::Application.routes.draw do
   match '/home', to: 'home#index', :via => [:get,:post], as: :home
   match '/price-list', to: 'home#price_list', :via => :get, as: :price_list
   match '/showcase', to: 'home#showcase', :via => :get, as: :showcase
+  resources :charges
 end

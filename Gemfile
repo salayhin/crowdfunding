@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0'
-gem 'json', '~> 1.7.7'
+# gem 'json', '~> 1.7.7'
 
 gem 'pg'
 
@@ -23,8 +23,8 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
   gem 'uglifier', '>= 1.0.3'
 
-  gem "therubyracer", '~> 0.12.1'
-  gem "less-rails", '~> 2.5.0'
+  gem 'therubyracer', '~> 0.12.1'
+  gem 'less-rails', '~> 2.5.0'
   gem 'font-awesome-rails', '~> 4.0.3.2'
 end
 
@@ -45,3 +45,6 @@ gem 'rails_config'
 
 # For Heroku
 gem 'rails_12factor'
+
+# Payment
+gem 'stripe', '~> 1.14.0'
