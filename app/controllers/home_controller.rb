@@ -8,4 +8,8 @@ class HomeController < ApplicationController
   def price_list
     @PaymentOptions = PaymentOption.all
   end
+
+  def showcase
+
+  end
 end
