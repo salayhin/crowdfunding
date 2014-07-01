@@ -4,6 +4,8 @@ development:
   database: selfstarter_development
   pool: 5
   host: localhost
+  username: root
+  password: root
 
 
 test:
@@ -12,3 +14,5 @@ test:
   database: selfstarter_test
   pool: 5
   host: localhost
+  username: root
+  password: root

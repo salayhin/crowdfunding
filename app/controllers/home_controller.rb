@@ -8,4 +8,8 @@ class HomeController < ApplicationController
   def price_list
 
   end
+
+  def showcase
+
+  end
 end
