@@ -48,3 +48,7 @@ gem 'rails_12factor'
 
 # Payment
 gem 'stripe', '~> 1.14.0'
+
+# Admin Panel
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
