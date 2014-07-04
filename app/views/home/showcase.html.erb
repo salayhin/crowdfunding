@@ -142,19 +142,63 @@
                 <form action="" class="payment-info-form">
                   <div class="card-input">
 
-                    <div>
+                    <div class="card-info-title">
                       <%= image_tag 'icon-green-lock.png' %>
                       <label for="">PAYMENT INFO</label>
                     </div>
+                    
+                    <div>
+                      <input type="text" class="credit-card-number" name="" placeholder="Credit Card Number"/>
+                    </div>
 
+                    <div class="row">
+                      <div class="col-sm-6 credit-card-date"><input type="text" placeholder="MM/YYYY"/></div>
+                      <div class="col-sm-6 credit-card-cvc"><input type="text" placeholder="CVC"/></div>
+                    </div>
+                    <div class="stripe-logo"><%= image_tag 'stripe-logo.png' %></div>
                   </div>
                 </form>
+
+                <div class="phone-number-for-delivery">
+                  <ul>
+                    <li>PHONE NUMBER</li>
+                    <li>(FOR DELIVERY)</li>
+                  </ul>
+                  <input type="text" placeholder="Phone Number"/>
+                </div>
               </div>
             </div>
         </div>
       </div>
     </div>
 
+    <div class="cart-container">
+      <ul>
+        <li>
+          <div class="product-name-description">
+              <div class="product-name">BLACK MATTE PEBBLE</div>
+              <div class="product-description">SHIPS NEXT BUSINESS DAY.</div>
+          </div>
+          <div class="product-quantity">10X</div>
+          <div class="product-price">$249</div>
+        </li>
+        <li>
+          <div class="product-name-description"></div>
+          <div class="product-quantity">SUB TOTAL</div>
+          <div class="product-price">$5,490.00</div>
+        </li>
+        <li>
+          <div class="product-name-description"></div>
+          <div class="product-quantity">SHIPPING</div>
+          <div class="product-price">FREE</div>
+        </li>
+        <li class="total">
+          <div class="product-name-description"></div>
+          <div class="product-quantity">TOTAL</div>
+          <div class="product-price">$5,490.00</div>
+        </li>
+      </ul>
+    </div>
   </div>
 
 </div>

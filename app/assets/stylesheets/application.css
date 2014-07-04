@@ -36,6 +36,12 @@
 
 @font-face{font-family:'PFD-Regular';src:url("//d3rrgxxoyz0alr.cloudfront.net/assets/PFDinDisplayPro-Reg-80c35983e759076b8bc3e357f01604c2.ttf") format("truetype")}
 
+input:focus {
+    border-color: #FFA37F;
+    transition-delay: 0s;
+    transition-duration: 0.15s;
+    transition-property: all;
+}
 
 table.footer-logos tr td {
     padding: 15px 7px;
@@ -576,23 +582,139 @@ table.footer-logos tr td {
     font-size: 18px;
     text-align: center;
 }
-.payment-info-form {
+.payment-info-form { }
 
-}
 .payment-info-form .card-input {
     background-color: #f4f4f4;
     border-radius: 7px;
-    width: 75%;
+    width: 90%;
     margin: 0px auto;
     padding: 10px;
     -moz-box-shadow: inset 0 0 10px #c7c7c7;
     -webkit-box-shadow: inset 0 0 10px #c7c7c7;
     box-shadow: inset 0 0 10px #c7c7c7;
+    text-align: center;
 }
 .payment-info-form label {
-    font-family: PFD-Regular, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+    font-family: PFD-Light, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
 }
 
+.card-info-title {
+    display: inline-block;
+    margin: 0 auto;
+}
+.credit-card-number {
+    width: 280px;
+    margin: 0 auto;
+    display: inline-block;
+    font-family: PFD-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #fafafa;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 100;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 0;
+    height: 40px;
+    border: 4px solid #D2D2D2;
+    line-height: 22px;
+    color: #666666;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.payment-info-form .card-input .row {
+    width: 280px;
+    margin: 0 auto;
+}
+.payment-info-form .card-input .row .col-sm-6.credit-card-date {
+    padding-left: 0;
+}
+.payment-info-form .card-input .row .col-sm-6.credit-card-cvc {
+    padding-right: 0;
+}
+.credit-card-date input, .credit-card-cvc input {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    font-family: PFD-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #fafafa;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 100;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 0;
+    height: 40px;
+    border: 4px solid #D2D2D2;
+    line-height: 22px;
+    color: #666666;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.stripe-logo {
+    display: block;
+    text-align: center;
+    padding-top: 12px;
+}
+.stripe-logo img {
+    height: 25px;
+}
+.phone-number-for-delivery {
+    text-align: center;
+}
+.phone-number-for-delivery ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    width: 100%;
+}
+.phone-number-for-delivery ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    line-height: 20px;
+    font-size: 18px;
+    font-family: PFD-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.phone-number-for-delivery input {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 5px;
+    display: inline-block;
+    font-family: PFD-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #fafafa;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 100;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 0;
+    height: 40px;
+    border: 4px solid #D2D2D2;
+    line-height: 22px;
+    color: #666666;
+    font-size: 15px;
+}
+
+.cart-container {}
+.cart-container ul {}
+.cart-container ul li {}
+.cart-container .product-name-description {}
+.cart-container .product-name {}
+.cart-container .product-description {}
+.cart-container .product-quantity {}
+.cart-container .product-price {}
 
 
 @media (max-width: 768px) {
