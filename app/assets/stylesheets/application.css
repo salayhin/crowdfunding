@@ -446,7 +446,7 @@ table.footer-logos tr td {
     line-height: 22px;
 }
 .split-content-panel {
-
+    padding-top: 20px;
 }
 .shipping-address-wrapper {
 
@@ -461,11 +461,14 @@ table.footer-logos tr td {
     margin: 0 auto;
     font-weight: bold;
     color: #555555;
+    margin-bottom: 5px;
 }
 .shipping-address-wrapper .left-content-unit { }
 .shipping-address-wrapper .right-content-unit { }
 .shipping-address-form {
     width: 388px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 .shipping-address-form label {
     text-align: center;
@@ -475,8 +478,11 @@ table.footer-logos tr td {
     font-weight: normal;
     color: #666;
     width: 100%;
+    margin-bottom: 0;
+    line-height: 28px;
+    padding-top: 4px;
 }
-.shipping-address-form input {
+.shipping-address-form input, .shipping-address-form select {
     font-family: PFD-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: block;
     background: #fafafa;
@@ -492,6 +498,8 @@ table.footer-logos tr td {
     width: 100%;
     border: 4px solid #D2D2D2;;
     line-height: 22px;
+    color: #666666;
+    font-size: 15px;
 }
 .shipping-address-form input:focus {
     border-color: #FFA37F;
@@ -499,13 +507,99 @@ table.footer-logos tr td {
     transition-duration: 0.15s;
     transition-property: all;
 }
+.shipping-address-form input.address-line-one {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-width: 2px;
+}
+.shipping-address-form input.address-line-two {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-width: 2px;
+}
+.shipping-address-form .city-state .col-sm-6.city {
+    padding-left: 0;
+    padding-top: 24px;
+}
+.shipping-address-form .city-state .col-sm-6.state {
+    padding-right: 0;
+    padding-top: 24px;
+}
+.shipping-address-form .zip-country .col-sm-6.zip {
+    padding-left: 0;
+    padding-top: 24px;
+}
+.shipping-address-form .zip-country .col-sm-6.country {
+    padding-right: 0;
+    padding-top: 24px;
+}
+.shipping-address-form .zip-country .col-sm-6.country input {
+    background: #555555;
+    border-color: #222222;
+    border-width: 3px;
+    color: #ffffff;
+}
+.same-billing-address {
+    font-size: 22px;
+    width: 388px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.same-billing-address .custom-check {
+    width: 20px;
+    height: 20px;
+    margin: 20px auto;
+    position: relative;
+}
+.same-billing-address .custom-check input {
+    margin: 3px 3px 3px 4px;
+}
+.same-billing-address .custom-check label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 3px;
+    border-radius: 4px;
+    background-image: url("check-box-unchecked.png");
+}
+.same-billing-address .custom-check input:checked +label {
+    background-image: url("check-box-checked.png");
+    background-repeat: no-repeat;
+}
+.same-billing-address .check-box-label {
+    padding-left: 9px;
+    font-family: PFD-Regular, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+.payment-info-form {
+
+}
+.payment-info-form .card-input {
+    background-color: #f4f4f4;
+    border-radius: 7px;
+    width: 75%;
+    margin: 0px auto;
+    padding: 10px;
+    -moz-box-shadow: inset 0 0 10px #c7c7c7;
+    -webkit-box-shadow: inset 0 0 10px #c7c7c7;
+    box-shadow: inset 0 0 10px #c7c7c7;
+}
+.payment-info-form label {
+    font-family: PFD-Regular, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+}
 
 
 
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+    .shipping-address-form .city-state .col-sm-6 {
+        padding: 0;
+    }
+    .shipping-address-form .zip-country .col-sm-6 {
+        padding: 0;
+    }
+}

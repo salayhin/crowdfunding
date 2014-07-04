@@ -54,20 +54,101 @@
       <div class="split-content-panel">
 
         <div class="shipping-address-wrapper">
-          <div class="section-title">SHIPPING ADDRESS</div>
+
             <div class="row">
               <div class="left-content-unit col-sm-6">
                 <form action="" class="shipping-address-form">
+                  <div class="section-title">SHIPPING ADDRESS</div>
                   <label>FULL NAME</label>
-                  <input type="text" placeholder="YOUR FULL NAME"/>
+                  <input type="text" placeholder="Your Full Name"/>
+
+                  <label>E-Mail</label>
+                  <input type="text" placeholder="Your Email Address"/>
+
                   <label>SHIPPING ADDRESS</label>
-                  <input type="text" placeholder="ADDRESS LINE ONE"/>
-                  <input type="text" placeholder="ADDRESS LINE TWO (OPTIONAL)"/>
+                  <input type="text" class="address-line-one" placeholder="ADDRESS LINE ONE"/>
+                  <input type="text" class="address-line-two" placeholder="ADDRESS LINE TWO (OPTIONAL)"/>
+                  <div class="row city-state">
+                    <div class="col-sm-6 city">
+                      <input type="text" placeholder="City"/>
+                    </div>
+                    <div class="col-sm-6 state">
+                      <select name="" id="">
+                        <option value="">State</option>
+                        <option value="">More State</option>
+                        <option value="">More State</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row zip-country">
+                    <div class="col-sm-6 zip">
+                      <input type="text" placeholder="zip"/>
+                    </div>
+                    <div class="col-sm-6 country">
+                      <input type="text" placeholder="Country" value="Country" readonly/>
+                    </div>
+                  </div>
+                </form>
+
+
+
+                <div class="row">
+                  <p class="same-billing-address">
+                    <span class="custom-check">
+                        <input checked="checked" id="same-address" name="same-address" type="checkbox" value="yes">
+                        <label for="same-address"></label>
+                    </span>
+                    <span class="check-box-label">Billing Address and Shipping Address Are the same</span>
+                  </p>
+                </div>
+
+
+
+                <form action="" class="shipping-address-form">
+                  <div class="section-title">BILLING ADDRESS</div>
+                  <label>FULL NAME</label>
+                  <input type="text" placeholder="Your Full Name"/>
+
+                  <label>E-Mail</label>
+                  <input type="text" placeholder="Your Email Address"/>
+
+                  <label>SHIPPING ADDRESS</label>
+                  <input type="text" class="address-line-one" placeholder="ADDRESS LINE ONE"/>
+                  <input type="text" class="address-line-two" placeholder="ADDRESS LINE TWO (OPTIONAL)"/>
+                  <div class="row city-state">
+                    <div class="col-sm-6 city">
+                      <input type="text" placeholder="City"/>
+                    </div>
+                    <div class="col-sm-6 state">
+                      <select name="" id="">
+                        <option value="">State</option>
+                        <option value="">More State</option>
+                        <option value="">More State</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row zip-country">
+                    <div class="col-sm-6 zip">
+                      <input type="text" placeholder="zip"/>
+                    </div>
+                    <div class="col-sm-6 country">
+                      <input type="text" placeholder="Country" value="Country" readonly/>
+                    </div>
+                  </div>
                 </form>
               </div>
 
               <div class="right-content-unit col-sm-6">
-                l
+                <form action="" class="payment-info-form">
+                  <div class="card-input">
+
+                    <div>
+                      <%= image_tag 'icon-green-lock.png' %>
+                      <label for="">PAYMENT INFO</label>
+                    </div>
+
+                  </div>
+                </form>
               </div>
             </div>
         </div>
