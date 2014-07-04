@@ -104,7 +104,7 @@
 
 
 
-                <form action="" class="shipping-address-form">
+                <form action="" class="shipping-address-form billing-address-form">
                   <div class="section-title">BILLING ADDRESS</div>
                   <label>FULL NAME</label>
                   <input type="text" placeholder="Your Full Name"/>
@@ -132,7 +132,11 @@
                       <input type="text" placeholder="zip"/>
                     </div>
                     <div class="col-sm-6 country">
-                      <input type="text" placeholder="Country" value="Country" readonly/>
+                      <select name="" id="">
+                        <option value="">Country</option>
+                        <option value="">More Country</option>
+                        <option value="">More Country</option>
+                      </select>
                     </div>
                   </div>
                 </form>
@@ -171,34 +175,65 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="cart-container">
-      <ul>
-        <li>
-          <div class="product-name-description">
+
+
+  <div class="cart-container">
+
+    <div class="orange-hr"></div>
+
+    <div id="cart-div">
+      <ul class="cart-wrapper" id="cart-items">
+        <li id="cart-item-1">
+          <div class="row cart-item">
+            <div class="product-name-description col-xs-7">
               <div class="product-name">BLACK MATTE PEBBLE</div>
               <div class="product-description">SHIPS NEXT BUSINESS DAY.</div>
+            </div>
+            <div class="product-quantity col-xs-2">10X</div>
+            <div class="product-price col-xs-3">$249</div>
           </div>
-          <div class="product-quantity">10X</div>
-          <div class="product-price">$249</div>
         </li>
-        <li>
-          <div class="product-name-description"></div>
-          <div class="product-quantity">SUB TOTAL</div>
-          <div class="product-price">$5,490.00</div>
+      </ul>
+      <ul class="cart-wrapper cart-price">
+        <li class="sub-total">
+          <div class="row">
+            <div class="product-name-description col-xs-7"></div>
+            <div class="product-quantity col-xs-2">SUB TOTAL</div>
+            <div class="product-price col-xs-3">$5,490.00</div>
+          </div>
         </li>
-        <li>
-          <div class="product-name-description"></div>
-          <div class="product-quantity">SHIPPING</div>
-          <div class="product-price">FREE</div>
+        <li class="shipping-cost">
+          <div class="row">
+            <div class="product-name-description col-xs-7"></div>
+            <div class="product-quantity col-xs-2">SHIPPING</div>
+            <div class="product-price col-xs-3">FREE</div>
+          </div>
         </li>
-        <li class="total">
-          <div class="product-name-description"></div>
-          <div class="product-quantity">TOTAL</div>
-          <div class="product-price">$5,490.00</div>
+        <li class="total-price">
+          <div class="row">
+            <div class="product-name-description col-xs-7"></div>
+            <div class="product-quantity col-xs-2">TOTAL</div>
+            <div class="product-price col-xs-3">$5,490.00</div>
+          </div>
         </li>
       </ul>
     </div>
+
+    <div class="cart-is-empty">YOUR CART IS EMPTY</div>
+
+    <div class="orange-hr"></div>
+
+    <p class="complete-the-form">Please complete the form above to place your order.</p>
+
+    <button class="place-order">PLACE ORDER</button>
+
+    <div class="shipping-is-free">
+      <p><%= image_tag 'green-tick.png' %>Shipping is free, worldwide</p>
+      <p><%= image_tag 'green-tick.png' %>30 day return policy + 1 year warranty</p>
+    </div>
+
   </div>
 
 </div>
