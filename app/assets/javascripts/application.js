@@ -84,7 +84,7 @@ $(document).ready(function(){
             cart_item.attr('id', 'cart-item-' + pId);
 
             var showcase_item = $('#showcase-item-' + pId);
-            showcase_item.find('.showcase-item-qt').html(1);
+            //showcase_item.find('.showcase-item-qt').html(1);
             showcase_item.find('.showcase-item-select .qt').html(1);
             var p_name = showcase_item.find('.p_name').html();
             var p_description = showcase_item.find('.p_description').html();
@@ -106,7 +106,7 @@ $(document).ready(function(){
             lineItems[pId]['qt'] = qt;
             lineItems[pId]['price'] = totalPrice;
 
-            showcase_item.find('.showcase-item-qt').html(qt);
+            //showcase_item.find('.showcase-item-qt').html(qt);
             showcase_item.find('.showcase-item-select .qt').html(qt);
             cart_item.find('.product-quantity').html(qt + 'X');
             cart_item.find('.product-price').html('$' + totalPrice);
@@ -125,7 +125,7 @@ $(document).ready(function(){
             delete lineItems[pId];
 
             var showcase_item = $('#showcase-item-' + pId);
-            showcase_item.find('.showcase-item-qt').empty();
+            //showcase_item.find('.showcase-item-qt').empty();
             showcase_item.find('.showcase-item-select .qt').html(0);
             $('#cart-item-' + pId).remove();
         } else if(qt > 1) {
@@ -137,7 +137,7 @@ $(document).ready(function(){
             var showcase_item = $('#showcase-item-' + pId);
             var cart_item = $('#cart-item-' + pId);
 
-            showcase_item.find('.showcase-item-qt').html(qt);
+            //showcase_item.find('.showcase-item-qt').html(qt);
             showcase_item.find('.showcase-item-select .qt').html(qt);
 
             cart_item.find('.product-quantity').html(qt + 'X');
