@@ -742,10 +742,12 @@ table.footer-logos tr td {
 }
 .cart-container .product-name {
     line-height: 24px;
+    text-transform: uppercase;
 }
 .cart-container .product-description {
     font-size: 13px;
     line-height: 20px;
+    text-transform: uppercase;
 }
 .cart-container .product-quantity {
     text-align: left;
