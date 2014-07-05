@@ -207,7 +207,7 @@
           <div class="row">
             <div class="product-name-description col-xs-7"></div>
             <div class="product-quantity col-xs-2">SUB TOTAL</div>
-            <div class="product-price col-xs-3">$5,490.00</div>
+            <div class="product-price col-xs-3">$0.00</div>
           </div>
         </li>
         <li class="shipping-cost">
@@ -221,7 +221,7 @@
           <div class="row">
             <div class="product-name-description col-xs-7"></div>
             <div class="product-quantity col-xs-2">TOTAL</div>
-            <div class="product-price col-xs-3">$5,490.00</div>
+            <div class="product-price col-xs-3">$0.00</div>
           </div>
         </li>
       </ul>
@@ -243,3 +243,9 @@
   </div>
 
 </div>
+<%#
+/app/views/home/showcase.html.erb
+in line 10: replace index variable with product_id
+in line 11: .p_name, replace innertext with product_name. #it is hidden and will be used in cart
+in line 12: .p_description, replace innertext with product_description. #it is hidden and will be used in cart
+%>
