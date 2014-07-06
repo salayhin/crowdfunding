@@ -51,6 +51,9 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt (3.1.7)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -220,6 +223,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   amazon_flex_pay
+  better_errors
   coffee-rails (~> 4.0.0)
   devise
   font-awesome-rails (~> 4.0.3.2)

@@ -4,8 +4,8 @@ development:
   database: selfstarter_development
   pool: 5
   host: localhost
-  username: root
-  password: root
+  username: salayhin
+  password:
 
 
 test:

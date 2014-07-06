@@ -14,6 +14,6 @@ class HomeController < ApplicationController
   end
 
   def showcase
-
+    @PaymentOptions = PaymentOption.all
   end
 end
