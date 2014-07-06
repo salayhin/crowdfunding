@@ -162,3 +162,7 @@ $(document).ready(function(){
     });
 });
 /* .cart */
+
+$(document).ready(function(){
+    $(".carousel").carousel()
+});
