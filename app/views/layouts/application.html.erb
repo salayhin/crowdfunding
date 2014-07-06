@@ -1,67 +1,16 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-US" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Scribble" content="Color picking pen">
-  <title>A Color Picker Pen That Reproduces Any Color.</title>
-
-
-
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,300,300italic,400italic,500,700italic,700,900italic,900' rel='stylesheet' type='text/css'>
-
-  <link rel="shortcut icon" href="http://www.getscribblepen.com/favicon.ico" type="image/icon"> <link rel="icon" href="http://www.getscribblepen.com/favicon.ico" type="image/icon">
-
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <link href="/assets/oldie.css" rel="stylesheet">
-  <![endif]-->
-  <script src="//static.getclicky.com/js" type="text/javascript"></script>
-  <script type="text/javascript">try{ clicky.init(100739435); }catch(e){}</script>
-  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100739435ns.gif" /></p></noscript>
-
-  <script language="javascript">
-      document.onmousedown=disableclick;
-      status="Right Click Disabled";
-      function disableclick(event)
-      {
-          if(event.button==2)
-          {
-//              alert(status);
-//              return false;
-          }
-      }
-  </script>
-
-
-
-
-
-
   <title><%= Settings.product_name %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-
-
-
-
-
 </head>
-<body class="dart dart_index">
-<!-- Loader -->
-
-<%= render partial: 'shared/page_loader' %>
-<%= render partial: 'shared/header' %>
-
-
+<!--[if lt IE 9 ]><body class="lt-ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body><!--<![endif]-->
+<%= render 'preorder/header' %>
 <%= yield %>
-
-
-<%= render partial: 'shared/footer' %>
-
+<%= render 'preorder/footer' %>
 </body>
 </html>
-<%#= yield %>

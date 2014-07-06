@@ -5,6 +5,10 @@ class HomeController < ApplicationController
     end
   end
 
+  def tileapp
+
+  end
+
   def price_list
     @PaymentOptions = PaymentOption.all
   end
