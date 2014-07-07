@@ -164,5 +164,8 @@ $(document).ready(function(){
 /* .cart */
 
 $(document).ready(function(){
-    $(".carousel").carousel()
+    $(".carousel").carousel();
+    $(".carousel-indicators").on('click', 'li', function(){
+        return false;r
+    });
 });

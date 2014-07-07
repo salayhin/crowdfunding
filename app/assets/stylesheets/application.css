@@ -296,6 +296,7 @@ table.footer-logos tr td {
 }
 .showcase-wrapper {
     width: 935px;
+    max-width: 100%;
     margin: 0 auto;
 }
 .showcase-title {
@@ -992,79 +993,53 @@ table.footer-logos tr td {
     background-position: 0 -48px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #on-the-go {
     width: 100%;
     position: relative;
     z-index: 51;
 }
-#on-the-go .wrapper {
-    margin-left: -480px;
-    left: 50%;
-    position: absolute;
-    top: 188px;
-    z-index: 60;
-}
-.carousel.banner {
-    height: 560px;
-}
-.carousel.banner .center {
-    bottom: 41px;
-    left: 50%;
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
+.carousel.banner {}
 .carousel .item {
     background: #6b717b;
     left: 0 !important;
     opacity: 0;
-    height: 560px;
-    -webkit-transition-property: left, opacity;
-    -moz-transition-property: left, opacity;
-    -o-transition-property: left, opacity;
-    transition-property: left, opacity;
+    -webkit-transition: left, opacity 3s;
+    -moz-transition: left, opacity 3s;
+    -o-transition: left, opacity 3s;
+    transition: left, opacity 3s;
 }
-.carousel-inner #item-1 {
-    background: #6b717b url('carousel1.jpg') no-repeat center top;
+
+.carousel-inner > .item.active {
+    opacity: 1;
 }
-.carousel-inner #item-2 {
-    background: #6b717b url('carousel2.jpg') no-repeat center top;
+.carousel .item.active.left {left:0;opacity:0;z-index:2;-webkit-transition: opacity 0.6s; -moz-transition: opacity 0.6s; -ms-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s;}
+.carousel .item.next {left:0;opacity:1;z-index:1;-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
+#on-the-go .wrapper .info {
+    right: 10%;
+    position: absolute;
+    top: 5%;
+    width: 434px;
+    z-index: 99;
 }
-.carousel-inner #item-3 {
-    background: #6b717b url('carousel3.jpg') no-repeat center top;
+#on-the-go .wrapper .info h3 {
+    background: url('icon-sleek.png') no-repeat 3px 8px;
+    color: #fff;
+    line-height: 33px;
+    padding: 0 0 14px 60px;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: none;
 }
-.carousel-inner #item-4 {
-    background: #6b717b url('carousel4.jpg') no-repeat center top;
+#on-the-go .wrapper .info p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-shadow: none;
 }
-.carousel-inner #item-5 {
-    background: #6b717b url('carousel5.jpg') no-repeat center top;
-}
+
+
 
 
 
