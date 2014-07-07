@@ -166,6 +166,10 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(".carousel").carousel();
     $(".carousel-indicators").on('click', 'li', function(){
-        return false;r
+        return false;
+    });
+    $('#iphoneCarousel').carousel();
+    $("#iphoneCarousel").on('click', 'li', function(){
+        return false;
     });
 });

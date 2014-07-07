@@ -1038,9 +1038,68 @@ table.footer-logos tr td {
     letter-spacing: 1px;
     text-shadow: none;
 }
+.keeping-track .point_copy {
+    width: 100%;
+}
+.keeping-track .point_copy h3, .keeping-track .point_copy h4 {
+    background: url('icon-app.png') no-repeat 0 6px;
+    line-height: 31px;
+    margin: 28px 0 0;
+    padding: 0 0 0 54px;
+    width: 320px;
+    color: #6b717b;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Open Sans', Helvetica, Arial;
+}
+.keeping-track .point_copy h4 {
+    font-size: 18px;
+}
+.keeping-track .point_copy p {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0;
+    font-family: "Open Sans", Helvetica, Arial;
+    color: #a1a3a7;
+}
+.keeping-track .point_copy li h4.more {
+    background-position: 0 -172px;
+}
+.keeping-track .point_copy li h4.sharing {
+    background-position: 0 -294px;
+}
+.keeping-track .point_copy li h4.sound {
+    background-position: 0 -420px;
+}
+.keeping-track .point_copy li h4.place {
+    background-position: 0 -542px;
+}
 
-
-
+.keeping-track .screenshot_holder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.keeping-track #iphoneCarousel {
+    height: 560px;
+}
+.keeping-track .carousel-inner {
+    position: static;
+}
+.keeping-track .carousel.app .item {
+    width: 283px;
+    height: 502px;
+    position: absolute;
+    top: 109px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.keeping-track .carousel.app .item img {
+    height: 100%;
+    width: 100%;
+}
 
 
 
