@@ -173,3 +173,8 @@ $(document).ready(function(){
         return false;
     });
 });
+$(document).ready(function(){
+   $('.faq-question').on('click', function(){
+       $(this).next().toggle('slow');
+   });
+});

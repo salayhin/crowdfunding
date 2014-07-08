@@ -1131,6 +1131,100 @@ table.footer-logos tr td {
     border: 1px solid #195579;
     display: block;
 }
+.features-overview {
+    font-family: "Open Sans", Helvetica, Arial;
+    text-shadow: none;
+    color: #6b717b;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.features-overview-title {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.features-overview-title h3 {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 31px;
+    margin: 28px 0 0;
+    padding: 0 0 20px 0;
+    color: #6b717b;
+    font-family: 'Open Sans', Helvetica, Arial;
+}
+.feature-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+.feature-image img {
+    height: 45px;
+}
+.features-overview .feature {
+    margin-top: 30px;
+}
+.features-overview .feature h4 {
+    color: #6b717b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Open Sans', Helvetica, Arial;
+}
+.features-overview .feature p {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 10px;
+    text-align: center;
+    color: #a1a3a7;
+    font-family: 'Open Sans', Helvetica, Arial;
+}
+.faq-container {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.faq-container-title {
+    text-align: center;
+    padding-bottom: 25px;
+}
+.faq-container-title h3 {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 31px;
+    margin: 28px 0 0;
+    padding: 0 0 0 54px;
+    color: #6b717b;
+    font-family: 'Open Sans', Helvetica, Arial;
+}
+.faq-question {
+    width: 100%;
+    padding-left: 20px;
+    background: url("faq-arrow.png") no-repeat;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Open Sans', Helvetica, Arial;
+    font-weight: bold;
+    color: #6b717b;
+    line-height: 12px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.faq-question:hover {
+    text-decoration: underline;
+}
+.faq-answer {
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+    color: #a1a3a7;
+    font-family: 'Open Sans', Helvetica, Arial;
+    display: none;
+}
 
 
 
