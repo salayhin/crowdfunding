@@ -177,4 +177,12 @@ $(document).ready(function(){
    $('.faq-question').on('click', function(){
        $(this).next().toggle('slow');
    });
+
+   $('.site-menu a').on('click', function(){
+       var target = $(this).data('target');
+       var go_to = $('.'+target).position().top;
+       go_to += 'px';
+       $("html, body").animate({ scrollTop: go_to });
+       return false;
+   });
 });
