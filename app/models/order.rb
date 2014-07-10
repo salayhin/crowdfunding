@@ -1,7 +1,8 @@
 class Order < ActiveRecord::Base
   before_validation :generate_uuid!, :on => :create
   belongs_to :user
-  belongs_to :payment_option
+  has_many :order_details
+  has_many :payment_options, through: :order_details
   scope :completed, -> { where("token != ? OR token != ?", "", nil) }
   self.primary_key = 'uuid'
 
