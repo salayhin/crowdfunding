@@ -78,6 +78,7 @@ $(document).ready(function(){
             lineItems[pId] = {};
             lineItems[pId]['qt'] = 1;
             lineItems[pId]['price'] = price;
+            var qt = 1;
 
             var cart_item = $('#blank-cart-item li').clone();
             cart_item.css('display', 'block');
@@ -93,8 +94,11 @@ $(document).ready(function(){
             cart_item.find('.product-description').html(p_description);
             cart_item.find('.product-quantity').html('1X');
             cart_item.find('.product-price').html('$' + price);
-            cart_item.find('.payment_option_id').val(pId);
-            cart_item.find('.payment_option_price').val(price);
+            //cart_item.find('.payment_option_id').val(pId);
+            //cart_item.find('.payment_option_price').val(price);
+
+            cart_item.find('.payment_option_price').val(price).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['price']");
+            cart_item.find('.payment_option_quantity').val(qt).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['quantity']");
 
             $('#cart-items').append(cart_item);
         } else {
@@ -113,7 +117,10 @@ $(document).ready(function(){
             showcase_item.find('.showcase-item-select .qt').html(qt);
             cart_item.find('.product-quantity').html(qt + 'X');
             cart_item.find('.product-price').html('$' + totalPrice);
-            cart_item.find('.payment_option_quantity').val(qt);
+//            cart_item.find('.payment_option_quantity').val(qt);
+
+            cart_item.find('.payment_option_price').val(price).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['price']");
+            cart_item.find('.payment_option_quantity').val(qt).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['quantity']");
         }
 
         calculateTotal();
@@ -188,5 +195,13 @@ $(document).ready(function(){
        go_to += 'px';
        $("html, body").animate({ scrollTop: go_to });
        return false;
+   });
+   $('#same-address').on('change', function(){
+       var is_same = $('#same-address').is(":checked");
+       if(is_same) {
+           $('.billing-address-form').hide();
+       } else {
+           $('.billing-address-form').show();
+       }
    });
 });
