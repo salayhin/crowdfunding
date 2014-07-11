@@ -583,7 +583,9 @@ table.footer-logos tr td {
     font-size: 18px;
     text-align: center;
 }
-.payment-info-form { }
+.payment-info-form {
+    margin-top: 15px;
+}
 
 .payment-info-form .card-input {
     background-color: #f4f4f4;

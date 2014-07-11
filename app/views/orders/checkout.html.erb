@@ -63,7 +63,7 @@
 
 <div class="row">
 <div class="left-content-unit col-sm-6">
-<form action="" class="shipping-address-form">
+<div class="shipping-address-form">
 <div class="section-title">SHIPPING ADDRESS</div>
 <label>FULL NAME</label>
 <%= f.text_field :name, :placeholder => 'Your Full Name' %>
@@ -334,7 +334,7 @@
 </select>
 </div>
 </div>
-</form>
+</div>
 
 
 <div class="row">
@@ -347,7 +347,7 @@
   </p>
 </div>
 
-
+<div class="shipping-address-form">
 <div class="section-title">BILLING ADDRESS</div>
 <label>FULL NAME</label>
 <%= f.text_field :billing_full_name, :placeholder => 'Your Full Name' %>
@@ -619,10 +619,12 @@
 </select>
 </div>
 </div>
+</div>
 
 </div>
 
 <div class="right-content-unit col-sm-6">
+  <div class="payment-info-form">
     <div class="card-input">
 
       <div class="card-info-title">
@@ -640,6 +642,7 @@
       </div>
       <div class="stripe-logo"><%= image_tag 'stripe-logo.png' %></div>
     </div>
+  </div>
   <div class="phone-number-for-delivery">
     <ul>
       <li>PHONE NUMBER</li>
