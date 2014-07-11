@@ -164,5 +164,25 @@ $(document).ready(function(){
 /* .cart */
 
 $(document).ready(function(){
-    $(".carousel").carousel()
+    $(".carousel").carousel();
+    $(".carousel-indicators").on('click', 'li', function(){
+        return false;
+    });
+    $('#iphoneCarousel').carousel();
+    $("#iphoneCarousel").on('click', 'li', function(){
+        return false;
+    });
+});
+$(document).ready(function(){
+   $('.faq-question').on('click', function(){
+       $(this).next().toggle('slow');
+   });
+
+   $('.site-menu a').on('click', function(){
+       var target = $(this).data('target');
+       var go_to = $('.'+target).position().top;
+       go_to += 'px';
+       $("html, body").animate({ scrollTop: go_to });
+       return false;
+   });
 });

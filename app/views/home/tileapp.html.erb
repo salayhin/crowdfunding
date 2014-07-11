@@ -48,6 +48,9 @@
       </div>
   </div>
 
+
+
+
   <div class="logo-container big-wrapper">
     <div class="site-wrapper">
       <ul>
@@ -77,56 +80,31 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="carousel-container" id="on-the-go">
+  <div class="carousel-container on-the-go" id="on-the-go">
     <div class="wrapper">
       <div class="info">
-        <div>
-          <h3>Small and sleek, Tiles go everywhere you do.</h3>
-          <p>Just attach, stick or drop your Tile into any item you might lose: laptops, wallets, keys, guitars, bikes—you name it. Then get on with the fun.</p>
-        </div>
+        <h3>Small and sleek, Tiles go everywhere you do.</h3>
+        <p>Just attach, stick or drop your Tile into any item you might lose: laptops, wallets, keys, guitars, bikes—you name it. Then get on with the fun.</p>
       </div>
     </div>
     <div class="carousel banner slide" id="tileCarousel">
       <div class="center">
         <div>
           <ol class="carousel-indicators">
-            <li data-target="#tileCarousel" data-slide-to="0" class="first"></li>
+            <li data-target="#tileCarousel" data-slide-to="0" class="first active"></li>
             <li data-target="#tileCarousel" data-slide-to="1" class=""></li>
             <li data-target="#tileCarousel" data-slide-to="2" class=""></li>
-            <li data-target="#tileCarousel" data-slide-to="3" class="active"></li>
+            <li data-target="#tileCarousel" data-slide-to="3" class=""></li>
             <li data-target="#tileCarousel" data-slide-to="4" class=""></li>
           </ol>
         </div>
       </div>
       <div class="carousel-inner">
-        <div class="item" id="item-1"></div>
-        <div class="item" id="item-2"></div>
-        <div class="item" id="item-3"></div>
-        <div class="item active" id="item-4"></div>
-        <div class="item" id="item-5"></div>
+        <div class="item active" id="item-1"><%= image_tag 'carousel1.jpg' %></div>
+        <div class="item" id="item-2"><%= image_tag 'carousel2.jpg' %></div>
+        <div class="item" id="item-3"><%= image_tag 'carousel3.jpg' %></div>
+        <div class="item" id="item-4"><%= image_tag 'carousel4.jpg' %></div>
+        <div class="item" id="item-5"><%= image_tag 'carousel5.jpg' %></div>
       </div>
     </div>
   </div>
@@ -134,28 +112,163 @@
 
 
 
+  <div class="keeping-track">
+    <div class="big_wrapper">
+      <div class="wrapper clearfix site-wrapper">
+
+        <div class="row col-sm-6">
+            <div class="point_copy">
+
+              <h3>
+                Keeping track<br>of stuff on the go
+              </h3>
+              <p>
+                The Tile app on your phone makes it easy and fun to find your Tile(s) anywhere, anytime.
+              </p>
+              <ul>
+                <li>
+                  <h4 class="more">More is better</h4>
+                  <p>Use Tile on as many things as you want.<br>Add up to 8 Tiles on an account.</p>
+                </li>
+                <li>
+                  <h4 class="sharing">Share with people you trust (Coming Soon!)</h4>
+                  <p>You can share access to Tiles with friends,<br> family, and trusted coworkers.</p>
+                </li>
+                <li>
+                  <h4 class="sound">Take that, couch cushions</h4>
+                  <p>Tiles will play you a melody if triggered.<br>If you can hear it, you can find it.</p>
+                </li>
+                <li>
+                  <h4 class="place">The last place seen</h4>
+                  <p>The app remembers where it last saw your Tile, so you can easily find it right where you left it.</p>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+
+        <div class="row col-sm-6">
+            <div class="app">
+              <%= image_tag 'app.jpg', alt: 'App', title: '' %>
+
+              <div class="screenshot_holder">
+                <div class="carousel app slide" id="iphoneCarousel">
+                  <div class="center">
+                    <div>
+                      <ol class="carousel-indicators">
+                        <li data-target="#iphoneCarousel" data-slide-to="0" class="first active"></li>
+                        <li data-target="#iphoneCarousel" data-slide-to="1" class=""></li>
+                        <li data-target="#iphoneCarousel" data-slide-to="2" class=""></li>
+                        <li data-target="#iphoneCarousel" data-slide-to="3" class=""></li>
+                        <li data-target="#iphoneCarousel" data-slide-to="4" class=""></li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="item item-1 active"><%= image_tag 'app-01.png' %></div>
+                    <div class="item item-2"><%= image_tag 'app-02.png' %></div>
+                    <div class="item item-3"><%= image_tag 'app-03.png' %></div>
+                    <div class="item item-4"><%= image_tag 'app-04.png' %></div>
+                    <div class="item item-5"><%= image_tag 'app-05.png' %></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 
 
 
+  <div class="backordered-summer big-wrapper">
+    <div class="site-wrapper center">
+      <p>Shipping to First Backers Now</p>
+      <h2>Backordered Summer 2014</h2>
+      <a href="/preorders/pick_color" class="blue_button reserve">Preorder for $179</a>
+    </div>
+  </div>
 
 
 
 
+  <div class="features-overview">
+    <div class="site-wrapper">
+
+        <div class="features-overview-title">
+          <h3>Features Overview</h3>
+        </div>
+
+        <div class="row">
+          <div class="feature feature_ios col-sm-4">
+            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
+            <h4>iOS 7 Compatible</h4>
+            <p>Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</p>
+          </div>
+          <div class="feature feature_warmer col-sm-4">
+            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
+            <h4>You're getting warmer</h4>
+            <p>You can see yourself getting closer and further away from the Tile when within a 50 - 150ft range.</p>
+          </div>
+          <div class="feature feature_sound col-sm-4">
+            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
+            <h4>Now hear this</h4>
+            <p>Tiles come with a built-in speaker so you can easily hear it in close range.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="feature feature_one_year col-sm-4">
+            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
+            <h4>A whole year?</h4>
+            <p>Tiles last a year. We'll remind you when it's time to order new Tiles and send you an envelope to recycle your old ones.</p>
+          </div>
+          <div class="feature feature_gps col-sm-4">
+            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
+            <h4>Right where you left it</h4>
+            <p>The Tile app saves the last GPS location it saw your Tile.</p>
+          </div>
+          <div class="feature feature_battery col-sm-4">
+            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
+            <h4>No batteries to replace?</h4>
+            <p>Nope, you never need to replace the batteries or even charge your Tiles.</p>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+
+  <div class="faq-container big-wrapper">
+    <div class="site-wrapper">
+      <div class="faq-container-title">
+        <h3>Frequently Asked Questions</h3>
+      </div>
+
+      <div class="row">
+        <div class="faq-container-left col-sm-6">
+          <div class="faq-question">What phones does Tile work with?</div>
+          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+          <div class="faq-question">What phones does Tile work with?</div>
+          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+          <div class="faq-question">What phones does Tile work with?</div>
+          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+        </div>
+
+        <div class="faq-container-left col-sm-6">
+          <div class="faq-question">What phones does Tile work with?</div>
+          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+          <div class="faq-question">What phones does Tile work with?</div>
+          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+          <div class="faq-question">What phones does Tile work with?</div>
+          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
