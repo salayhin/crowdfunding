@@ -65,7 +65,7 @@ $(document).ready(function(){
         for (var key in lineItems) {
             if (lineItems.hasOwnProperty(key)) {
                 var cart_item = lineItems[key];
-                sum = sum + cart_item['price']
+                sum = sum +  parseFloat(cart_item['price']);
             }
         }
         var cart_price = $('#cart-price');
@@ -93,6 +93,9 @@ $(document).ready(function(){
             cart_item.find('.product-description').html(p_description);
             cart_item.find('.product-quantity').html('1X');
             cart_item.find('.product-price').html('$' + price);
+            cart_item.find('.payment_option_id').val(pId);
+            cart_item.find('.payment_option_price').val(price);
+
             $('#cart-items').append(cart_item);
         } else {
             var qt = parseInt(lineItems[pId]['qt'], 10);
@@ -110,6 +113,7 @@ $(document).ready(function(){
             showcase_item.find('.showcase-item-select .qt').html(qt);
             cart_item.find('.product-quantity').html(qt + 'X');
             cart_item.find('.product-price').html('$' + totalPrice);
+            cart_item.find('.payment_option_quantity').val(qt);
         }
 
         calculateTotal();
