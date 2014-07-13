@@ -633,12 +633,12 @@
       </div>
 
       <div>
-        <input type="text" class="credit-card-number" name="" placeholder="Credit Card Number"/>
+        <input type="text" class="credit-card-number" data-stripe="number" size="4" placeholder="Credit Card Number"/>
       </div>
 
       <div class="row">
-        <div class="col-sm-6 credit-card-date"><input type="text" placeholder="MM/YYYY"/></div>
-        <div class="col-sm-6 credit-card-cvc"><input type="text" placeholder="CVC"/></div>
+        <div class="col-sm-6 credit-card-date"><input type="text" data-stripe="exp-month" placeholder="MM/YYYY"/></div>
+        <div class="col-sm-6 credit-card-cvc"><input type="text" size="4" data-stripe="cvc" placeholder="CVC"/></div>
       </div>
       <div class="stripe-logo"><%= image_tag 'stripe-logo.png' %></div>
     </div>
