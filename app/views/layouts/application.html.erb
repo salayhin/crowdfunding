@@ -19,19 +19,176 @@
     Stripe.setPublishableKey('pk_test_q4ZNLiQWrYZTs3pxKSMxuJ6f');
     // ...
 
+    var stripeResponseHandler = function(status, response) {
+        var $form = $('#new_order');
+
+        if (response.error){
+            $form.find('.payment-errors').html('<div class="error_explanation"><h2>' + response.error.message + '</h2></div>');
+            switch (response.error.code){
+                case 'incorrect_number':
+                    addErrorMessage($('#credit_card_number'), 'Incorrect');
+                    break;
+                case 'invalid_number':
+                    addErrorMessage($('#credit_card_number'), 'Invalid');
+                    break;
+                case 'invalid_expiry_month':
+                    addErrorMessage($('#month_wrapper .jqTransformSelectWrapper'), 'Invalid');
+                    break;
+                case 'invalid_expiry_year':
+                    addErrorMessage($('#year_wrapper .jqTransformSelectWrapper'), 'Invalid');
+                    break;
+                case 'invalid_cvc':
+                    addErrorMessage($('#cvv'), 'Invalid');
+                    break;
+                case 'expired_card':
+                    addErrorMessage($('#credit_card_number'), 'Expired');
+                    break;
+                case 'incorrect_cvc':
+                    addErrorMessage($('#cvv'), 'Incorrect');
+                    break;
+                case 'card_declined':
+                    addErrorMessage($('#credit_card_number'), 'Declined');
+            }
+            $form.find('.payment_submit').prop('disabled', false);
+        }
+        else{
+            var token = response.id;
+            $form.append($("<input type='hidden' name='stripeToken' />").val(token));
+            $form.get(0).submit();
+        }
+    };
+
+    function addErrorMessage(element, message){
+        if(!element.parent().hasClass('field_with_errors')){
+            element.wrap('<div class="field_with_errors"></div>');
+            element.after('<label class="message">' + message + '</label>');
+        }
+    }
+
+    function address_validation() {
+        var $order_shipping_first_name  =   $('#order_shipping_first_name');
+        var $order_shipping_last_name   =   $('#order_shipping_last_name');
+        var $order_shipping_email       =   $('#order_shipping_email');
+        var $order_shipping_address1    =   $('#order_shipping_address1');
+        var $order_shipping_city        =   $('#order_shipping_city');
+        var $order_shipping_zip_code    =   $('#order_shipping_zip_code');
+
+        var $other_billing_address      =   $('#other_billing_address');
+        var $order_first_name           =   $('#order_first_name');
+        var $order_last_name            =   $('#order_last_name');
+        var $order_email                =   $('#order_email');
+        var $order_address1             =   $('#order_address1');
+        var $order_city                 =   $('#order_city');
+        var $order_zip_code             =   $('#order_zip_code');
+
+        var $card_number = $('.card-number');
+        var $card_cvc = $('.card-cvc');
+        var is_pass                     =   true;
+
+        removeAllErrorMessage();
+        if($order_shipping_first_name.val() == ''){
+            addErrorMessage($order_shipping_first_name, 'Required');
+            is_pass = false;
+        }
+
+        if($order_shipping_last_name.val() == ''){
+            addErrorMessage($order_shipping_last_name, 'Required');
+            is_pass = false;
+        }
+
+        if($order_shipping_email.val() == ''){
+            addErrorMessage($order_shipping_email, 'Required');
+            is_pass = false;
+        }
+        else if(!is_valid_email($order_shipping_email.val())){
+            //email validation
+            addErrorMessage($order_shipping_email, 'Invalid Email');
+            is_pass = false;
+        }
+
+        if($order_shipping_address1.val() == ''){
+            addErrorMessage($order_shipping_address1, 'Required');
+            is_pass = false;
+        }
+
+        if($order_shipping_city.val() == ''){
+            addErrorMessage($order_shipping_city, 'Required');
+            is_pass = false;
+        }
+
+        if($order_shipping_zip_code.val() == ''){
+            addErrorMessage($order_shipping_zip_code, 'Required');
+            is_pass = false;
+        }
+
+        if($other_billing_address.is(':checked')){
+            if($order_first_name.val() == ''){
+                addErrorMessage($order_first_name, 'Required');
+                is_pass = false;
+            }
+
+            if($order_last_name.val() == ''){
+                addErrorMessage($order_last_name, 'Required');
+                is_pass = false;
+            }
+
+            if($order_email.val() == ''){
+                addErrorMessage($order_email, 'Required');
+                is_pass = false;
+            }
+            else if(!is_valid_email($order_email.val())){
+                // email validation
+                addErrorMessage($order_email, 'Required');
+                is_pass = false;
+            }
+
+            if($order_address1.val() == ''){
+                addErrorMessage($order_address1, 'Required');
+                is_pass = false;
+            }
+
+            if($order_city.val() == ''){
+                addErrorMessage($order_city, 'Required');
+                is_pass = false;
+            }
+
+            if($order_zip_code.val() == ''){
+                addErrorMessage($order_zip_code, 'Required');
+                is_pass = false;
+            }
+        }
+
+        if($card_number.val() == ''){
+            addErrorMessage($card_number, 'Required');
+            is_pass = false;
+        }
+        if($card_cvc.val() == ''){
+            addErrorMessage($card_cvc, 'Required');
+            is_pass = false;
+        }
+
+        if(!is_pass){
+            errorMessageOnTop($('.content'), 'You are so close! Please fill in the missing information outlined in red');
+            $('html, body').animate({scrollTop: top}, 'slow');
+        }
+        return is_pass;
+    }
+
     // Payment
     $(document).on('submit', '#new_order', function(){
         var $form = $(this);
         $form.find('.place-order').prop('disabled', true);
 
-        if(address_validation()){
+        var expire_date = $('.card-date').val().split('/');
+
+        //if(address_validation()){
             Stripe.card.createToken({
-                number: $('.card-number').val(),
+                number: $('.credit-card-number').val(),
                 cvc: $('.card-cvc').val(),
-                exp_month: $('.card-expiry-month').val(),
-                exp_year: $('.card-expiry-year').val()
+                exp_month: parseInt(expire_date[0]),
+                exp_year: parseInt(expire_date[1])
             }, stripeResponseHandler);
-        }
+        //}
         $form.find('.payment_submit').prop('disabled', false);
         return false;
     });

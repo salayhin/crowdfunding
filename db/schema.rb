@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710185934) do
+ActiveRecord::Schema.define(version: 20140714190959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 20140710185934) do
     t.datetime "updated_at"
     t.integer  "payment_option_id"
     t.string   "order_uid"
+    t.float    "price"
+    t.integer  "quantity"
   end
 
   create_table "orders", id: false, force: true do |t|
@@ -109,6 +111,23 @@ ActiveRecord::Schema.define(version: 20140710185934) do
     t.datetime "updated_at"
     t.string   "title"
     t.boolean  "is_published"
+  end
+
+  create_table "transactions", force: true do |t|
+    t.string   "order_id"
+    t.float    "order_total"
+    t.string   "stripe_charge_id"
+    t.string   "stripe_customer_id"
+    t.string   "card_last_4_digit"
+    t.string   "card_brand"
+    t.string   "card_exp_month"
+    t.string   "card_exp_year"
+    t.boolean  "is_refunded"
+    t.float    "refund_amount"
+    t.boolean  "is_paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "stripe_charge"
   end
 
   create_table "users", force: true do |t|

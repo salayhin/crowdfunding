@@ -64,4 +64,12 @@ Selfstarter::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Stripe Client ID development
+  STRIPE_CONNECT_CLIENT_ID = 'ca_3w26Ns8guse6rg93PhJytT4rrzrF7OGd'
+  STRIPE_SECRET_KEY        = 'sk_test_dDbhx7c06NqtaPvZZTxMKlhm'
+
+  # Admin email address for email notification
+  ADMIN_EMAIL = 'salayhin@nascenia.com'
+  FROM_EMAIL = 'hello@undiscoveredkitchen.com'
 end

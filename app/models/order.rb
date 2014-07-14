@@ -1,7 +1,8 @@
 class Order < ActiveRecord::Base
   before_validation :generate_uuid!, :on => :create
   belongs_to :user
-  has_many :order_details
+  has_many :transactions, dependent: :destroy
+  has_many :order_details,  dependent: :destroy
   has_many :payment_options, through: :order_details
   scope :completed, -> { where("token != ? OR token != ?", "", nil) }
   self.primary_key = 'uuid'
@@ -80,5 +81,5 @@ class Order < ActiveRecord::Base
     end 
   end
 
-  validates_presence_of :name, :price, :user_id
+  validates_presence_of :name, :user_id
 end

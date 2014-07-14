@@ -36,4 +36,12 @@ Selfstarter::Application.configure do
   config.assets.debug = true
 
   config.serve_static_assets = true
+
+  # Stripe Client ID development
+  STRIPE_CONNECT_CLIENT_ID = 'ca_3w26Ns8guse6rg93PhJytT4rrzrF7OGd'
+  STRIPE_SECRET_KEY        = 'sk_test_dDbhx7c06NqtaPvZZTxMKlhm'
+
+  # Admin email address for email notification
+  ADMIN_EMAIL = 'salayhin@nascenia.com'
+  FROM_EMAIL = 'hello@undiscoveredkitchen.com'
 end

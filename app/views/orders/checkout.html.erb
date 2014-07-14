@@ -361,16 +361,16 @@
 
 <div class="row city-state">
   <div class="col-sm-6 city">
-    <%= f.text_field :city, :placeholder => 'City' %>
+    <%= f.text_field :billing_city, :placeholder => 'City' %>
   </div>
   <div class="col-sm-6 state">
-    <%= f.text_field :state, :placeholder => 'State' %>
+    <%= f.text_field :billing_state, :placeholder => 'State' %>
   </div>
 </div>
 
 <div class="row zip-country">
 <div class="col-sm-6 zip">
-  <%= f.text_field :zip, :placeholder => 'Zip' %>
+  <%= f.text_field :billing_zip, :placeholder => 'Zip' %>
 </div>
 <div class="col-sm-6 country">
 <select class="select required country" name="order['billing_country']" placeholder="Country" required="required">
@@ -624,6 +624,7 @@
 </div>
 
 <div class="right-content-unit col-sm-6">
+  <div class="payment-errors"></div>
   <div class="payment-info-form">
     <div class="card-input">
 
@@ -637,8 +638,8 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-6 credit-card-date"><input type="text" data-stripe="exp-month" placeholder="MM/YYYY"/></div>
-        <div class="col-sm-6 credit-card-cvc"><input type="text" size="4" data-stripe="cvc" placeholder="CVC"/></div>
+        <div class="col-sm-6 credit-card-date"><input type="text" class="card-date" data-stripe="exp-month" placeholder="MM/YYYY"/></div>
+        <div class="col-sm-6 credit-card-cvc"><input type="text" size="4" class="card-cvc" data-stripe="cvc" placeholder="CVC"/></div>
       </div>
       <div class="stripe-logo"><%= image_tag 'stripe-logo.png' %></div>
     </div>
