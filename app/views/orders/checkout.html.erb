@@ -10,8 +10,8 @@
   <!--in line 11: .p_name, replace innertext with product_name. #it is hidden and will be used in cart-->
   <!--in line 12: .p_description, replace innertext with product_description. #it is hidden and will be used in cart-->
 
-  <% @PaymentOptions.each_with_index do |item, index| %>
-      <div data-pid="<%= index %>" data-price="<%= item.amount %>" id="showcase-item-<%= index %>" class="showcase-item <%= 'border-left-for-4' if index%4==0 %> <%= 'border-left-for-2' if index%2==0 %>">
+  <% @PaymentOptions.each_with_index do |item, index | %>
+      <div data-pid="<%= item.id %>" data-price="<%= item.amount %>" id="showcase-item-<%= item.id %>" class="showcase-item <%= 'border-left-for-4' if index % 4 == 0 %> <%= 'border-left-for-2' if index%2==0 %>">
         <div class="p_name" style="display: none;"><%= item.title %></div>
         <div class="p_description" style="display: none;"><%= item.title %></div>
         <div class="showcase-item-title"><%= item.title %></div>
