@@ -66,8 +66,8 @@ Selfstarter::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Stripe Client ID development
-  STRIPE_CONNECT_CLIENT_ID = 'ca_3w26Ns8guse6rg93PhJytT4rrzrF7OGd'
-  STRIPE_SECRET_KEY        = 'sk_test_dDbhx7c06NqtaPvZZTxMKlhm'
+  STRIPE_CONNECT_CLIENT_ID = 'ca_4JOtA8LW6GLYih1fGY6149cYQVq9dY7x'
+  STRIPE_SECRET_KEY        = 'sk_test_bDV8XKnlEG6M43QfLnYvBODO'
 
   # Admin email address for email notification
   ADMIN_EMAIL = 'salayhin@nascenia.com'

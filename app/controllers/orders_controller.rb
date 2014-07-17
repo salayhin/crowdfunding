@@ -26,25 +26,47 @@ class OrdersController < ApplicationController
 
   def save_order_info
 
-    @order = Order.new(
-        name: params[:order][:name],
-        email: params[:order][:email],
-        address_one: params[:order][:address_one],
-        address_two: params[:order][:address_two],
-        city: params[:order][:city],
-        state: params[:order][:state],
-        zip: params[:order][:zip],
-        country: params[:order][:country],
-        billing_full_name: params[:order][:billing_full_name],
-        billing_email: params[:order][:billing_email],
-        billing_address1: params[:order][:billing_address1],
-        billing_address2: params[:order][:billing_address2],
-        billing_city: params[:order][:billing_city],
-        billing_state: params[:order][:billing_state],
-        billing_zip: params[:order][:billing_zip],
-        billing_country: params[:order][:billing_country],
-        user_id: @user.id
-    )
+    if params[:order]["'same_address'"] == "1"
+      @order = Order.new(
+          name: params[:order][:name],
+          email: params[:order][:email],
+          address_one: params[:order][:address_one],
+          address_two: params[:order][:address_two],
+          city: params[:order][:city],
+          state: params[:order][:state],
+          zip: params[:order][:zip],
+          country: params[:order][:country],
+          billing_full_name: params[:order][:name],
+          billing_email: params[:order][:email],
+          billing_address1: params[:order][:address_one],
+          billing_address2: params[:order][:address_two],
+          billing_city: params[:order][:city],
+          billing_state: params[:order][:state],
+          billing_zip: params[:order][:zip],
+          billing_country: params[:order][:country],
+          user_id: @user.id
+      )
+    else
+      @order = Order.new(
+          name: params[:order][:name],
+          email: params[:order][:email],
+          address_one: params[:order][:address_one],
+          address_two: params[:order][:address_two],
+          city: params[:order][:city],
+          state: params[:order][:state],
+          zip: params[:order][:zip],
+          country: params[:order][:country],
+          billing_full_name: params[:order][:billing_full_name],
+          billing_email: params[:order][:billing_email],
+          billing_address1: params[:order][:billing_address1],
+          billing_address2: params[:order][:billing_address2],
+          billing_city: params[:order][:billing_city],
+          billing_state: params[:order][:billing_state],
+          billing_zip: params[:order][:billing_zip],
+          billing_country: params[:order][:billing_country],
+          user_id: @user.id
+      )
+    end
 
     total = 0.0
 
@@ -112,7 +134,11 @@ class OrdersController < ApplicationController
       @charge = data_json
 
       if @charge.present? && valid_stripe_charge?(@charge.id)
-        transaction.update_attributes(stripe_charge_id: @charge.id, card_brand: @charge.card.type)
+        transaction.update_attributes(stripe_charge_id: @charge.id, stripe_customer_id: @charge.customer,
+                                      card_last_4_digit: @charge.card.last4,  card_brand: @charge.card.type,
+                                      card_exp_month: @charge.card.exp_month, card_exp_year: @charge.card.exp_year,
+                                      is_paid: @charge.paid, is_refunded: @charge.refunded,
+                                      stripe_charge: transaction.get_stripe_charge)
         session[:charged_successful] = true
       end
     rescue Stripe::CardError => ex
