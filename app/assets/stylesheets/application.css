@@ -1162,7 +1162,7 @@ table.footer-logos tr td {
 
 }
 .feature-image img {
-    height: 45px;
+    height: 75px;
 }
 .features-overview .feature {
     margin-top: 30px;
@@ -1233,7 +1233,7 @@ table.footer-logos tr td {
 .site-header .site-logo {}
 .site-header .site-logo img {
     display: inline-block;
-    width: 50px;
+    width: 120px;
     height: 50px;
 }
 .site-menu {

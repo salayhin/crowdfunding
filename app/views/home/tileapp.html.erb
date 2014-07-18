@@ -4,15 +4,16 @@
         <div class="row">
           <div class="col-sm-7">
 
-            <iframe class="home-video" src="http://www.youtube.com/embed/pqDm3gZNZPM?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            <iframe class="home-video" src="http://www.youtube.com/embed/W6t-O8Lqgmk?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
             <div class="share-section">
               <a href="#" class="twitter-share">
-                <%= image_tag 'share_twitter.png', alt: 'Share twitter' %>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-count="none"><%= image_tag 'share_twitter.png' %></a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
               </a>
 
               <a href="#" class="facebook-share">
-                <%= image_tag 'share_facebook.png', alt: 'Share facebook.png' %>
+                <%= image_tag 'share_facebook.png' %>
               </a>
             </div>
           </div>
@@ -20,26 +21,23 @@
           <div class="col-sm-5 right-side">
 
               <div class="value">
-                <h2>Welcome to Tile, the world's largest lost and found.</h2>
+                <h4>An AMAZING color picker pen.</h4>
 
                 <p>Now fulfilling preorders!</p>
               </div>
 
               <div class="preorder">
-                <p>
-                  For a limited time, preorder now for $19.95
-                </p>
 
-                <a href="/orders/new" onclick="ga('send', 'event', 'Reserve', 'click');">
-                <span>
-                  Reserve My Tile Today
+                <a href="/checkout" onclick="ga('send', 'event', 'Reserve', 'click');">
+                <span style="font-size: 15px">
+                  PRE-ORDER MY SCRIBBLE PEN NOW
                 </span>
 
                   <span class="arrow"></span>
                 </a>
 
                 <div class="short-estimate">
-                  Reserve now for Fall 2014
+
                 </div>
               </div>
 
@@ -80,37 +78,91 @@
 
 
 
-  <div class="carousel-container on-the-go" id="on-the-go">
-    <div class="wrapper">
-      <div class="info">
-        <h3>Small and sleek, Tiles go everywhere you do.</h3>
-        <p>Just attach, stick or drop your Tile into any item you might lose: laptops, wallets, keys, guitars, bikes—you name it. Then get on with the fun.</p>
-      </div>
-    </div>
-    <div class="carousel banner slide" id="tileCarousel">
-      <div class="center">
-        <div>
-          <ol class="carousel-indicators">
-            <li data-target="#tileCarousel" data-slide-to="0" class="first active"></li>
-            <li data-target="#tileCarousel" data-slide-to="1" class=""></li>
-            <li data-target="#tileCarousel" data-slide-to="2" class=""></li>
-            <li data-target="#tileCarousel" data-slide-to="3" class=""></li>
-            <li data-target="#tileCarousel" data-slide-to="4" class=""></li>
-          </ol>
+  <!--<div class="carousel-container on-the-go" id="on-the-go">-->
+    <!--<div class="wrapper">-->
+      <!--<div class="info">-->
+        <!--<h3>Small and sleek, Tiles go everywhere you do.</h3>-->
+        <!--<p>Just attach, stick or drop your Tile into any item you might lose: laptops, wallets, keys, guitars, bikes—you name it. Then get on with the fun.</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="carousel banner slide" id="tileCarousel">-->
+      <!--<div class="center">-->
+        <!--<div>-->
+          <!--<ol class="carousel-indicators">-->
+            <!--<li data-target="#tileCarousel" data-slide-to="0" class="first active"></li>-->
+            <!--<li data-target="#tileCarousel" data-slide-to="1" class=""></li>-->
+            <!--<li data-target="#tileCarousel" data-slide-to="2" class=""></li>-->
+            <!--<li data-target="#tileCarousel" data-slide-to="3" class=""></li>-->
+            <!--<li data-target="#tileCarousel" data-slide-to="4" class=""></li>-->
+          <!--</ol>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="carousel-inner">-->
+        <!--<div class="item active" id="item-1"><%#= image_tag 'carousel1.jpg' %></div>-->
+        <!--<div class="item" id="item-2"><%#= image_tag 'carousel2.jpg' %></div>-->
+        <!--<div class="item" id="item-3"><%#= image_tag 'carousel3.jpg' %></div>-->
+        <!--<div class="item" id="item-4"><%#= image_tag 'carousel4.jpg' %></div>-->
+        <!--<div class="item" id="item-5"><%#= image_tag 'carousel5.jpg' %></div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <div class="backordered-summer big-wrapper">
+    <div class="site-wrapper center">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h5 class="featurette-heading" style="font-size: 25px;">Color reproduction and use that's so easy it's almost like magic</h5>
+          <p class="lead" style="font-size: 15px;">With the Scribble scanning and capturing any color is easy and fast. Simple hold the Scribble’s
+            scanner up to any color, like on a wall, a book or magazine, a painting or even a child’s toy and within a
+            second or 2 that color is stored in Scribble’s internal memory.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" width="500px" height="500px;" src="http://www.creativebackground.com/Demo/wp-content/uploads/2014/07/pickcolor-e1404468938587.jpg">
         </div>
       </div>
-      <div class="carousel-inner">
-        <div class="item active" id="item-1"><%= image_tag 'carousel1.jpg' %></div>
-        <div class="item" id="item-2"><%= image_tag 'carousel2.jpg' %></div>
-        <div class="item" id="item-3"><%= image_tag 'carousel3.jpg' %></div>
-        <div class="item" id="item-4"><%= image_tag 'carousel4.jpg' %></div>
-        <div class="item" id="item-5"><%= image_tag 'carousel5.jpg' %></div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="backordered-summer big-wrapper">
+    <div class="site-wrapper center">
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" width="500px" height="500px;" src="http://www.creativebackground.com/Demo/wp-content/uploads/2014/07/draw-mirror21.jpg">
+        </div>
+
+        <div class="col-md-7">
+          <h5 class="featurette-heading" style="font-size: 25px;">Draw on paper with the Scribble ink pen or draw on a
+            mobile screen with the Scribble stylus pen</h5>
+          <p class="lead" style="font-size: 15px;">Both the Scribble Stylus and Ink can hold thousands of different
+            colors and reproduce them exactly. The Scribble will literally replace a box full of crayons or marking pens
+            and make color reproduction fast and simple for any project and application.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <hr class="featurette-divider">
+
+  <div class="jumbotron" style="height: 640px; background: url('http://www.creativebackground.com/Demo/wp-content/uploads/2014/07/scribble-pen.jpg')">
+
+    <div class="col-md-8 col-md-offset-2">
+      <div class="container" style="text-align: center; color: #000000;">
+        <h4>SCRIBBLE IS THE BEST COLOR – GREEN</h4>
+        <p>One of the best features of the Scribble is that, since it can reproduce any color, it replaces thousands of
+          marking pens and thus will greatly reduce plastic waste that is filling our landfills all over the world. When
+          using the Stylus the amount of waste is reduced to practically nothing, making the Scribble one of the greenest
+          coloring tools ever created. With Scribble, it’s easy being Green!</p>
       </div>
     </div>
   </div>
 
 
 
+  <hr class="featurette-divider">
 
   <div class="keeping-track">
     <div class="big_wrapper">
@@ -120,27 +172,34 @@
             <div class="point_copy">
 
               <h3>
-                Keeping track<br>of stuff on the go
+                EFFORTLESS CONNECTIVITY
               </h3>
               <p>
-                The Tile app on your phone makes it easy and fun to find your Tile(s) anywhere, anytime.
+
               </p>
               <ul>
                 <li>
                   <h4 class="more">More is better</h4>
-                  <p>Use Tile on as many things as you want.<br>Add up to 8 Tiles on an account.</p>
+                  <p>Pairs with Scribble+ mobile app to instantly sync every color you scan directly onto your iPhone, iPad or Android </p>
                 </li>
                 <li>
-                  <h4 class="sharing">Share with people you trust (Coming Soon!)</h4>
-                  <p>You can share access to Tiles with friends,<br> family, and trusted coworkers.</p>
+                  <h4 class="more">Share with people you trust</h4>
+                  <p>Organize, tag, search and convert your colors to various color models.</p>
                 </li>
                 <li>
-                  <h4 class="sound">Take that, couch cushions</h4>
-                  <p>Tiles will play you a melody if triggered.<br>If you can hear it, you can find it.</p>
+                  <h4 class="more">Take that, couch cushions</h4>
+                  <p>Access your INk level information at the touch of a button</p>
                 </li>
                 <li>
-                  <h4 class="place">The last place seen</h4>
-                  <p>The app remembers where it last saw your Tile, so you can easily find it right where you left it.</p>
+                  <h4 class="more">The last place seen</h4>
+                  <p>Share colors with anyone, anytime anywhere</p>
+                </li>
+                <li>
+                  <h4 class="more">The last place seen</h4>
+                  <p>combine multiple colors to create new colors</p>
+                </li>
+                <li>
+                  <img width="650px" src="http://www.creativebackground.com/Demo/wp-content/uploads/2014/07/IMG_06072014_195640-small.png">
                 </li>
               </ul>
             </div>
@@ -149,7 +208,7 @@
 
         <div class="row col-sm-6">
             <div class="app">
-              <%= image_tag 'app.jpg', alt: 'App', title: '' %>
+              <%#= image_tag 'app.jpg', alt: 'App', title: '' %>
 
               <div class="screenshot_holder">
                 <div class="carousel app slide" id="iphoneCarousel">
@@ -159,17 +218,13 @@
                         <li data-target="#iphoneCarousel" data-slide-to="0" class="first active"></li>
                         <li data-target="#iphoneCarousel" data-slide-to="1" class=""></li>
                         <li data-target="#iphoneCarousel" data-slide-to="2" class=""></li>
-                        <li data-target="#iphoneCarousel" data-slide-to="3" class=""></li>
-                        <li data-target="#iphoneCarousel" data-slide-to="4" class=""></li>
                       </ol>
                     </div>
                   </div>
                   <div class="carousel-inner">
-                    <div class="item item-1 active"><%= image_tag 'app-01.png' %></div>
-                    <div class="item item-2"><%= image_tag 'app-02.png' %></div>
-                    <div class="item item-3"><%= image_tag 'app-03.png' %></div>
-                    <div class="item item-4"><%= image_tag 'app-04.png' %></div>
-                    <div class="item item-5"><%= image_tag 'app-05.png' %></div>
+                    <div class="item item-1 active"><%= image_tag 'penstat.png' %></div>
+                    <div class="item item-2"><%= image_tag 'savedcolor1.png' %></div>
+                    <div class="item item-3"><%= image_tag 'farmorange.png' %></div>
                   </div>
                 </div>
               </div>
@@ -182,18 +237,6 @@
 
 
 
-
-  <div class="backordered-summer big-wrapper">
-    <div class="site-wrapper center">
-      <p>Shipping to First Backers Now</p>
-      <h2>Backordered Summer 2014</h2>
-      <a href="/preorders/pick_color" class="blue_button reserve">Preorder for $179</a>
-    </div>
-  </div>
-
-
-
-
   <div class="features-overview">
     <div class="site-wrapper">
 
@@ -203,36 +246,39 @@
 
         <div class="row">
           <div class="feature feature_ios col-sm-4">
-            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
-            <h4>iOS 7 Compatible</h4>
-            <p>Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</p>
+            <div class="feature-image"><%= image_tag 'nib_size.png' %></div>
+            <h4>Choose your nib size</h4>
+            <p>Our nib set offers you a fantastic range of stroke weights. Choose from fine to heavy depending on your
+              mood! We offer 10 tip sizes, 0.3mm, 0.5mm, 0.85mm, 1mm, 1.2mm, 1.5mm, 1.8mm, 2.3mm, 2.75 and 3.71mm.</p>
           </div>
           <div class="feature feature_warmer col-sm-4">
-            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
-            <h4>You're getting warmer</h4>
-            <p>You can see yourself getting closer and further away from the Tile when within a 50 - 150ft range.</p>
+            <div class="feature-image"><%= image_tag 'mobile_compatible.png' %></div>
+            <h4>We are mobile compatible</h4>
+            <p>Scribble can sync colors to your mobile App when you are on the go! Scan and sync any color instantly
+              from your Scribble Pen or Stylus to any Android, iPhone, iPad or Windows mobile device.</p>
           </div>
           <div class="feature feature_sound col-sm-4">
-            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
-            <h4>Now hear this</h4>
-            <p>Tiles come with a built-in speaker so you can easily hear it in close range.</p>
+            <div class="feature-image"><%= image_tag 'more_compatible.png' %></div>
+            <h4>Even more compatible...</h4>
+            <p>You can easily import colors from your Pen and Stylus to your Mac and PC when you are working at your desk.</p>
           </div>
         </div>
         <div class="row">
           <div class="feature feature_one_year col-sm-4">
-            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
-            <h4>A whole year?</h4>
-            <p>Tiles last a year. We'll remind you when it's time to order new Tiles and send you an envelope to recycle your old ones.</p>
+            <div class="feature-image"><%= image_tag 'custom_color.png' %></div>
+            <h4>Program your own custom colors</h4>
+            <p>Program your own dream colors via our Mobile App. You can add and draw without worrying about what is captured in the Pen sensor.</p>
           </div>
           <div class="feature feature_gps col-sm-4">
-            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
-            <h4>Right where you left it</h4>
-            <p>The Tile app saves the last GPS location it saw your Tile.</p>
+            <div class="feature-image"><%= image_tag 'photoshop.png' %></div>
+            <h4>We love Photoshop</h4>
+            <p>Scribble is 100% Photoshop compatible, so you can transfer colors directly from your Pen to your computer screen.</p>
           </div>
           <div class="feature feature_battery col-sm-4">
-            <div class="feature-image"><%= image_tag 'wifi-icon.png' %></div>
-            <h4>No batteries to replace?</h4>
-            <p>Nope, you never need to replace the batteries or even charge your Tiles.</p>
+            <div class="feature-image"><%= image_tag 'lightfast_ink.png' %></div>
+            <h4>Lightfast long lasting Ink</h4>
+            <p>Our Scribble INK is both lightfast and water resistant. Our innovative designers have meticulously
+              engineered the Pen to ensure optimum ink management. Your ink will last a very long time!</p>
           </div>
         </div>
 
@@ -248,26 +294,87 @@
 
       <div class="row">
         <div class="faq-container-left col-sm-6">
-          <div class="faq-question">What phones does Tile work with?</div>
-          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
-          <div class="faq-question">What phones does Tile work with?</div>
-          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
-          <div class="faq-question">What phones does Tile work with?</div>
-          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+          <div class="faq-question">Is it true an INK cartridge would cost me an arm and a leg?</div>
+          <div class="faq-answer">Absolutely NOT. The Scribble ink cartridges would be very affordable to the public and
+            won’t be very pricey at all. We estimate a price range of $3-$10.</div>
+
+          <div class="faq-question">Does the pen require connection to the internet?</div>
+          <div class="faq-answer">NO. Scribble connects to your mobile phone via Bluetooth and it requires no Internet connection to work.</div>
+
+          <div class="faq-question">How long does it take to recharge the Scribble Ink and Stylus pen?</div>
+          <div class="faq-answer">Recharging your Scribble requires very little effort and time as it has a maximum charge time of 2-3 hours.</div>
+
+          <div class="faq-question">Is it safe for children to use?</div>
+          <div class="faq-answer">Absolutely. Scribble has been designed to be very safe for everyone – Kids, Teenagers and Adults alike.</div>
+
+          <div class="faq-question">Is it true a single Scribble can produce any color?</div>
+          <div class="faq-answer">It certainly can! Scribble is capable of reproducing millions of colors using our
+            patent-pending scan tip technology developed in-house by our team.</div>
+
+          <div class="faq-question">Is there a PC-friendly app?</div>
+          <div class="faq-answer">YES. The Scribble software for PC and MAC  would let you easily manage, tag and search
+            for colors on your computer.</div>
+
+          <div class="faq-question">Would it be compatible with a wacom tablet?</div>
+          <div class="faq-answer">We’re currently working on making the Scribble Stylus compatible with Wacom Tablets</div>
+
+          <div class="faq-question">Would the Scrible App be free?</div>
+          <div class="faq-answer">YES, the Scribble mobile app is completely FREE.</div>
         </div>
 
         <div class="faq-container-left col-sm-6">
-          <div class="faq-question">What phones does Tile work with?</div>
-          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
-          <div class="faq-question">What phones does Tile work with?</div>
-          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
-          <div class="faq-question">What phones does Tile work with?</div>
-          <div class="faq-answer">Works with iPhone 4S and newer, iPad Mini, iPad 3rd gen and newer, and iPod Touch 5th gen and newer.</div>
+          <div class="faq-question">Can I use Scribble on other materials like canvas or plastic?</div>
+          <div class="faq-answer">Yes, Scribble can draw on nearly every surface.</div>
+
+          <div class="faq-question">How do I refill the ink?</div>
+          <div class="faq-answer">To refill a depleted ink cartridge all you need to do is give the empty cartridge a
+            gentle twist until located directly below the pen. Then, pull and replace the cartridge with a new one or
+            refill it by using an easy-to-use mechanism that is provided with your Scribble</div>
+
+          <div class="faq-question">How does it work?</div>
+          <div class="faq-answer">Scribble works by using an advanced color sensor and bright led lights to illuminate
+            and capture colors from any object around you.
+
+            There are two Scribble models, one that works just like a regular marking pen on regular paper, and the other
+            that works with your tablet, smart phone or laptop.
+
+            The Scribble pen and stylus pairs with our mobile app to instantly sync every color you scan directly onto
+            your favorite mobile device. Your colors become more useful when they are organized, tagged, searchable and
+            converted to various color models such as RGB and CMYK.
+
+            Scribble is compatible with iOS, Android and Windows Phone.</div>
+
+          <div class="faq-question">How long would the ink last?</div>
+          <div class="faq-answer">Our innovative engineers have spent a large amount of time in the design and workings
+            of the pen, ensuring that ink management is at its optimum and the time for switch over is minimal. Very
+            little ink will be wasted in the change over from one color to the next, even if the colors are far apart
+            in the color spectrum.</div>
+
+          <div class="faq-question">Where do I purchase new ink?</div>
+          <div class="faq-answer">You may purchase a new ink cartridge via our website, or by placing an order for a
+            refill in the Scribble app on your mobile device. We’re also working towards making our Ink cartridges
+            available in local stores worldwide.</div>
+
+          <div class="faq-question">Will my pen work without a mobile device?</div>
+          <div class="faq-answer">Absolutely, the Scribble pen works with or without a mobile device. You will be able
+            to capture colors even if you don’t own or use a smartphone</div>
+
+          <div class="faq-question">Would I be able to refill just one of the colors or would I have to buy all of them at once?</div>
+          <div class="faq-answer">Yes, you will be able to replace a single color. In fact, replacing a single ink color
+            is extremely easy, way easier than replacing your regular printer’s ink cartridge. To make it even simpler
+            for you, Scribble provides a series of instructional videos that will help you replace your ink cartridge
+            in no time.</div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="backordered-summer big-wrapper">
+    <div class="site-wrapper center">
+      <h4>LIMITED QUANTITIES AVAILABLE</h4>
+      <a href="/checkout" class="blue_button reserve" style="font-size: 12px;">PRE-ORDER MY SCRIBBLE PEN NOW</a>
+    </div>
+  </div>
 
 
 
