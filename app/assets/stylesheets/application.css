@@ -36,6 +36,11 @@
 
 @font-face{font-family:'PFD-Regular';src:url("//d3rrgxxoyz0alr.cloudfront.net/assets/PFDinDisplayPro-Reg-80c35983e759076b8bc3e357f01604c2.ttf") format("truetype")}
 
+@font-face {
+    font-family: 'Open Sans';
+    src: local("Open Sans"), local("OpenSans"), url("http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+}
+
 input:focus {
     border-color: #FFA37F;
     transition-delay: 0s;
@@ -879,18 +884,19 @@ table.footer-logos tr td {
 }
 .home-video-container .right-side .preorder a {
     display: block;
-    background: #78b153;
+    background: #E7672A;
     border: 0;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    height: 76px;
-    line-height: 76px;
+    height: 60px;
+    line-height: 60px;
     margin: 0;
     padding: 0;
     text-decoration: none;
     color: #cacccf;
     position: relative;
+    width: 350px;
 }
 .home-video-container .right-side .preorder a span {
     -webkit-border-radius: 0 5px 5px 0;
@@ -901,22 +907,10 @@ table.footer-logos tr td {
     float: left;
     font-size: 20px;
     font-weight: 600;
-    height: 76px;
-    padding: 0 10px 0 12px;
+    height: 60px;
+    padding: 0;
     text-align: center;
     width: 100%;
-    padding-right: 59px;
-
-}
-.home-video-container .right-side .preorder a span.arrow {
-    background: #6da24a url('button_arrow.png') no-repeat center center;
-    border-left: 1px solid #669944;
-    /*float: left;*/
-    padding: 0;
-    width: 59px;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 .home-video-container .right-side .preorder .short-estimate {
     margin: 25px 0px 10px 0px;
@@ -1106,6 +1100,12 @@ table.footer-logos tr td {
     padding-top: 60px;
     padding-bottom: 0;
     font-family: ProximaNova-Light, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+.white-wrapper {
+    background: #ffffff;
+}
+.dark-wrapper {
+    background: #f6f7f9;
 }
 .pickcolor-orange-one {
     margin-top: 60px;
