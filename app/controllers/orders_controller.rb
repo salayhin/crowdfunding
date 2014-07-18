@@ -1,13 +1,15 @@
 class OrdersController < ApplicationController
 
   def checkout
-    @PaymentOptions = PaymentOption.all
+    @products = Product.all
     @order = Order.new
   end
 
   def create
     @user = User.find_or_create_by(:email => params[:order][:email])
+
     save_order_info
+
     if @error
       redirect_to checkout_path, notice: @message
       destroy_order(@order)
@@ -71,10 +73,10 @@ class OrdersController < ApplicationController
     total = 0.0
 
     if @order.save!
-      params[:order]["'payment_option'"].each do |payment|
+      params[:order]["'product'"].each do |payment|
 
         @order_detail = OrderDetail.new(
-          payment_option_id: payment[0][1..-2].to_i,
+          product_id: payment[0][1..-2].to_i,
           order_id: @order.uuid,
           price: payment[1]["'price'"].to_f,
           quantity: payment[1]["'quantity'"].to_f
@@ -83,7 +85,7 @@ class OrdersController < ApplicationController
         total = total + (payment[1]["'price'"].to_f * payment[1]["'quantity'"].to_f)
         @order_detail.save!
 
-        @order_detail.payment_option.change_quantity(- @order_detail.quantity.to_i)
+        @order_detail.product.change_quantity(- @order_detail.quantity.to_i)
       end
     end
 
@@ -173,5 +175,4 @@ class OrdersController < ApplicationController
   def destroy_order(order)
     Order.find_by_uuid(order.uuid).destroy if Order.where(uuid: order.uuid).present?
   end
-
 end

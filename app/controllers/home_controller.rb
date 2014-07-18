@@ -10,10 +10,10 @@ class HomeController < ApplicationController
   end
 
   def price_list
-    @PaymentOptions = PaymentOption.all
+    @PaymentOptions = Product.all
   end
 
   def showcase
-    @PaymentOptions = PaymentOption.all
+    @PaymentOptions = Product.all
   end
 end

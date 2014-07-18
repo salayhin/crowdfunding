@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_many :transactions, dependent: :destroy
   has_many :order_details,  dependent: :destroy
-  has_many :payment_options, through: :order_details
+  has_many :products, through: :order_details
   scope :completed, -> { where("token != ? OR token != ?", "", nil) }
   self.primary_key = 'uuid'
 
@@ -14,7 +14,7 @@ class Order < ActiveRecord::Base
     @order.user_id        = options[:user_id]
     @order.price          = options[:price]
     @order.number         = Order.next_order_number
-    @order.payment_option = options[:payment_option] if !options[:payment_option].nil?
+    @order.products = options[:payment_option] if !options[:payment_option].nil?
     @order.save!
 
     @order
@@ -75,7 +75,7 @@ class Order < ActiveRecord::Base
 
   def self.revenue
     if Settings.use_payment_options
-      PaymentOption.joins(:orders).where("token != ? OR token != ?", "", nil).pluck('sum(amount)')[0].to_f
+      Product.joins(:orders).where("token != ? OR token != ?", "", nil).pluck('sum(amount)')[0].to_f
     else
       Order.completed.sum(:price).to_f
     end 

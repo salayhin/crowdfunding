@@ -13,7 +13,7 @@ class PreorderController < ApplicationController
     if Settings.use_payment_options
       payment_option_id = params['payment_option']
       raise Exception.new("No payment option was selected") if payment_option_id.nil?
-      payment_option = PaymentOption.find(payment_option_id)
+      payment_option = Product.find(payment_option_id)
       price = payment_option.amount
     else
       price = Settings.price
