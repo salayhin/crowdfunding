@@ -97,8 +97,8 @@ $(document).ready(function(){
             //cart_item.find('.payment_option_id').val(pId);
             //cart_item.find('.payment_option_price').val(price);
 
-            cart_item.find('.payment_option_price').val(price).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['price']");
-            cart_item.find('.payment_option_quantity').val(qt).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['quantity']");
+            cart_item.find('.product_price').val(price).removeAttr('disabled').attr('name', "order['product']['" + pId + "']['price']");
+            cart_item.find('.product_quantity').val(qt).removeAttr('disabled').attr('name', "order['product']['" + pId + "']['quantity']");
 
             $('#cart-items').append(cart_item);
         } else {
@@ -119,8 +119,8 @@ $(document).ready(function(){
             cart_item.find('.product-price').html('$' + totalPrice);
 //            cart_item.find('.payment_option_quantity').val(qt);
 
-            cart_item.find('.payment_option_price').val(price).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['price']");
-            cart_item.find('.payment_option_quantity').val(qt).removeAttr('disabled').attr('name', "order['payment_option']['" + pId + "']['quantity']");
+            cart_item.find('.product_price').val(price).removeAttr('disabled').attr('name', "order['product']['" + pId + "']['price']");
+            cart_item.find('.product_quantity').val(qt).removeAttr('disabled').attr('name', "order['product']['" + pId + "']['quantity']");
         }
 
         calculateTotal();

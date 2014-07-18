@@ -4,7 +4,7 @@ class ChargesController < ApplicationController
 
     payment_option_id = params['payment_option']
     raise Exception.new("No payment option was selected") if payment_option_id.nil?
-    payment_option = PaymentOption.find(payment_option_id)
+    payment_option = Product.find(payment_option_id)
     price = payment_option.amount
 
     @order = Order.prefill!(:name => params[:stripeBillingName], :price => params[:amount], :user_id => @user.id, :payment_option => payment_option)
