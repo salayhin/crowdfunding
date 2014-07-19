@@ -81,5 +81,5 @@ class Order < ActiveRecord::Base
     end 
   end
 
-  validates_presence_of :name, :user_id
+  validates_presence_of :email, :user_id
 end

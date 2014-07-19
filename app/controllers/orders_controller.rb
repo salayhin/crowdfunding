@@ -8,6 +8,13 @@ class OrdersController < ApplicationController
   def create
     @user = User.find_or_create_by(:email => params[:order][:email])
 
+    if params[:order]["'product'"].nil?
+      @error   =  true
+      @message =  'Please add product first!.'
+      redirect_to checkout_path, notice: @message
+      return
+    end
+
     save_order_info
 
     if @error
@@ -28,47 +35,23 @@ class OrdersController < ApplicationController
 
   def save_order_info
 
-    if params[:order]["'same_address'"] == "1"
-      @order = Order.new(
-          name: params[:order][:name],
-          email: params[:order][:email],
-          address_one: params[:order][:address_one],
-          address_two: params[:order][:address_two],
-          city: params[:order][:city],
-          state: params[:order][:state],
-          zip: params[:order][:zip],
-          country: params[:order][:country],
-          billing_full_name: params[:order][:name],
-          billing_email: params[:order][:email],
-          billing_address1: params[:order][:address_one],
-          billing_address2: params[:order][:address_two],
-          billing_city: params[:order][:city],
-          billing_state: params[:order][:state],
-          billing_zip: params[:order][:zip],
-          billing_country: params[:order][:country],
-          user_id: @user.id
-      )
-    else
-      @order = Order.new(
-          name: params[:order][:name],
-          email: params[:order][:email],
-          address_one: params[:order][:address_one],
-          address_two: params[:order][:address_two],
-          city: params[:order][:city],
-          state: params[:order][:state],
-          zip: params[:order][:zip],
-          country: params[:order][:country],
-          billing_full_name: params[:order][:billing_full_name],
-          billing_email: params[:order][:billing_email],
-          billing_address1: params[:order][:billing_address1],
-          billing_address2: params[:order][:billing_address2],
-          billing_city: params[:order][:billing_city],
-          billing_state: params[:order][:billing_state],
-          billing_zip: params[:order][:billing_zip],
-          billing_country: params[:order][:billing_country],
-          user_id: @user.id
-      )
-    end
+      @order = Order.new
+      @order.first_name = params[:order][:first_name]
+      @order.last_name = params[:order][:last_name]
+      @order.name = params[:stripeShippingName].present? ? params[:stripeShippingName] : params[:stripeBillingName]
+      @order.email = params[:stripeEmail]
+      @order.address_one = params[:stripeShippingAddressLine1].present? ? params[:stripeShippingAddressLine1] : params[:stripeBillingAddressLine1]
+      @order.address_two = params[:stripeShippingAddressLine2].present? ? params[:stripeShippingAddressLine2] : params[:stripeBillingAddressLine2]
+      @order.city = params[:stripeShippingCity].present? ? params[:stripeShippingCity] : params[:stripeBillingCity]
+      @order.zip = params[:stripeShippingZip].present? ? params[:stripeShippingZip] : params[:stripeBillingZip]
+      @order.country = params[:stripeShippingCountry].present? ? params[:stripeShippingCountry] : params[:stripeBillingCountry]
+      @order.billing_full_name = params[:stripeBillingName]
+      @order.billing_address1 = params[:stripeBillingAddressLine1]
+      @order.billing_address2 = params[:stripeBillingAddressLine2]
+      @order.billing_city = params[:stripeBillingCity]
+      @order.billing_zip = params[:stripeBillingZip]
+      @order.billing_country = params[:stripeBillingCountry]
+      @order.user_id = @user.id
 
     total = 0.0
 
@@ -114,23 +97,20 @@ class OrdersController < ApplicationController
   end
 
   def create_stripe_charge(order_id)
-    token = params[:stripeToken]
-    customer = create_customer(order_id, token)
-
     transaction = Transaction.find_by_order_id(order_id)
 
-    # Set your secret key: remember to change this to your live secret key in production
-    # See your keys here https://dashboard.stripe.com/account
-    Stripe.api_key = STRIPE_SECRET_KEY
-
-    # Create the charge on Stripe's servers - this will charge the user's card
     begin
+      customer = Stripe::Customer.create(
+          :email => params[:stripeEmail],
+          :card  => params[:stripeToken]
+      )
+
       data_json = Stripe::Charge.create(
-          :amount => (transaction.order_total * 100).round, # amount in cents, again
-          :currency => "usd",
-          :customer => customer,
-          :description => transaction.order.email,
-          :metadata => { 'order_id' => order_id },
+          :customer    => customer.id,
+          :amount      => (transaction.order_total * 100).round,
+          :description => "Charge for #{@order.uuid}",
+          :currency    => 'usd',
+          metadata: { 'order_id' => order_id },
       )
 
       @charge = data_json
@@ -173,6 +153,6 @@ class OrdersController < ApplicationController
   end
 
   def destroy_order(order)
-    Order.find_by_uuid(order.uuid).destroy if Order.where(uuid: order.uuid).present?
+    Order.find_by_uuid(order.uuid).destroy if Order.where(id: order.uuid).present?
   end
 end

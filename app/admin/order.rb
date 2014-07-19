@@ -8,7 +8,7 @@ ActiveAdmin.register Order do
   permit_params :uuid, :address_one, :address_two, :city, :state, :zip, :country, :phone, :name,
                 :email, :billing_full_name, :billing_email, :billing_address1, :billing_address2,
                 :billing_city, :billing_state, :billing_zip, :billing_country, :tracking_number,
-                :billing_full_name, :billing_email
+                :billing_full_name, :billing_email, :id
   #
   # or
   #
@@ -22,12 +22,12 @@ ActiveAdmin.register Order do
     column 'Order Id' do |order|
       order.uuid
     end
-    column :name
+    column :first_name
+    column :last_name
     column :email
     column :address_one
     column :address_two
     column :city
-    column :state
     column :zip
     column :country
     column :created_at
@@ -39,21 +39,18 @@ ActiveAdmin.register Order do
       row 'Order Id' do |order|
         order.uuid
       end
-      row :name
+      row :first_name
+      row :last_name
       row :email
       row :address_one
       row :address_two
       row :city
-      row :state
       row :zip
       row :country
-      row :phone
       row :billing_full_name
-      row :billing_email
       row :billing_address1
       row :billing_address2
       row :billing_city
-      row :billing_state
       row :billing_zip
       row :billing_country
       row :tracking_number
@@ -98,6 +95,15 @@ ActiveAdmin.register Order do
         else
           h3 'No Detail Found'
         end
+      end
+    end
+  end
+
+
+  scope_to do
+    Class.new do
+      def self.orders
+        Order.order('created_at DESC')
       end
     end
   end

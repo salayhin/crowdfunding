@@ -210,27 +210,27 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     // This identifies your website in the createToken call below
-    Stripe.setPublishableKey('pk_test_q4ZNLiQWrYZTs3pxKSMxuJ6f');
+    //Stripe.setPublishableKey('pk_test_q4ZNLiQWrYZTs3pxKSMxuJ6f');
 
 
     // Payment
-    $(document).on('submit', '#new_order', function(){
-        var $form = $(this);
-        $form.find('.place-order').prop('disabled', true);
-
-        var expire_date = $('.card-date').val().split('/');
-
-        //if(address_validation()){
-        Stripe.card.createToken({
-            number: $('.credit-card-number').val(),
-            cvc: $('.card-cvc').val(),
-            exp_month: parseInt(expire_date[0]),
-            exp_year: parseInt(expire_date[1])
-        }, stripeResponseHandler);
-        //}
-        $form.find('.payment_submit').prop('disabled', false);
-        return false;
-    });
+//    $(document).on('submit', '#new_order', function(){
+//        var $form = $(this);
+//        $form.find('.place-order').prop('disabled', true);
+//
+//        var expire_date = $('.card-date').val().split('/');
+//
+//        //if(address_validation()){
+//        Stripe.card.createToken({
+//            number: $('.credit-card-number').val(),
+//            cvc: $('.card-cvc').val(),
+//            exp_month: parseInt(expire_date[0]),
+//            exp_year: parseInt(expire_date[1])
+//        }, stripeResponseHandler);
+//        //}
+//        $form.find('.payment_submit').prop('disabled', false);
+//        return false;
+//    });
 
 
     // ...
