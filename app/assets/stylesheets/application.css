@@ -1034,6 +1034,9 @@ table.footer-logos tr td {
     letter-spacing: 1px;
     text-shadow: none;
 }
+.keeping-track {
+    background: #f1f1f1;
+}
 .keeping-track .point_copy {
     width: 100%;
 }
@@ -1072,29 +1075,33 @@ table.footer-logos tr td {
 }
 
 .keeping-track .screenshot_holder {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
 }
 .keeping-track #iphoneCarousel {
-    height: 560px;
+    height: 713px;
 }
 .keeping-track .carousel-inner {
     position: static;
 }
 .keeping-track .carousel.app .item {
+    border-radius: 47px;
     width: 283px;
     height: 502px;
     position: absolute;
-    top: 109px;
+    top: 34px;
     left: 0;
     right: 0;
     margin: 0 auto;
 }
 .keeping-track .carousel.app .item img {
-    height: 100%;
-    width: 100%;
+    width: 300px;
+    height: 600px;
+}
+.keeping-track .carousel-indicators li {
+    background-color: rgba(220, 220, 220, 1);
+}
+.keeping-track .carousel-indicators li.active {
+    background: #888;
 }
 .backordered-summer {
     padding-top: 60px;
