@@ -1330,8 +1330,11 @@ table.footer-logos tr td {
 .no-text-shadow {
     text-shadow: none;
 }
-.p-top-90 {
-    padding-top: 90px;
+.p-top-150 {
+    padding-top: 150px;
+}
+.the-best-color p {
+    font-size: 18px;
 }
 
 
